@@ -1,0 +1,35 @@
+<Element
+  orientation="Horizontal"
+  overflow="Hidden">
+  <Shadow
+    color="all: 100"
+    offset="x: 0, y: 10"
+    blurSize="20"
+    opacity="1">
+  </Shadow>
+ 
+  <Element
+    orientation="Vertical"
+    alignItemsHor="Start"
+    width="100%">
+    <Element
+      element="mContent"
+      overflow="Scroll"
+      orientation="Horizontal"
+      width="100%"
+      scaling="Shrink">
+
+    </Element>
+    <MDElement
+      positionType="Absolute"
+      element="mSelection"
+      left="0"
+      bottom="0"
+      backgroundColor="MDTheme::Get()->PrimaryColor"
+      width="100%"
+      height="m: (2, 2, 4), d: (2, 2, 2)"
+      scaling="Grow">
+    </MDElement>
+  </Element>
+
+</Element>

@@ -1,0 +1,36 @@
+<MDElement
+  width="52dp"
+  height="32dp"
+  borderSize="2dp"
+  borderRadius="all: 0.5">
+
+  <!-- <Element
+    element="mBack"
+    width="100%"
+    height="70%"
+    borderRadius="all: 0.5"
+    backgroundColor="#9965f4">
+  </Element> -->
+
+  <Element
+    element="mCircle"
+    positionType="Absolute"
+    left="0"
+    aspectRatio="1"
+    height="24dp"
+    borderRadius="all: 0.5">
+    <!-- shapeType="Circle" -->
+
+    <Element
+      element="mRipple"
+      positionType="Absolute"
+      aspectRatio="1"
+      height="40"
+      shapeType="Circle">
+    </Element>
+
+  </Element>
+
+ 
+
+</MDElement>

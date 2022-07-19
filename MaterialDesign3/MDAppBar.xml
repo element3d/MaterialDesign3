@@ -1,0 +1,8 @@
+<MDElement
+  width="100%"
+  height="60dp"
+  overflow="Hidden">
+
+  <include path="MDColors.h"/>
+
+</MDElement>

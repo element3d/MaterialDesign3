@@ -1,0 +1,124 @@
+<MDElement
+  backgroundColor="all: 255"
+  orientation="Vertical">
+
+  <!-- <var
+    name="mMenuBody">
+    <MDMenuBody>
+      <MDMenuItem>
+        <MDListTile
+          title="_s(menu 1)">
+        </MDListTile>
+      </MDMenuItem>
+      <MDMenuItem
+        enabled="false">
+        <MDListTile
+          title="_s(menu 2)">
+        </MDListTile>
+      </MDMenuItem>
+    </MDMenuBody>
+  </var> -->
+
+  <MDAppBar
+    alignItemsHor="SpaceBetween">
+    <Element>
+      <MDAppBarAction
+        name="_s(menu)"
+        color="glm::vec4(255)">
+      </MDAppBarAction>
+      <MDAppBarTitle
+        text="App bar">
+      </MDAppBarTitle>
+    </Element>
+    <Element>
+      <MDAppBarAction
+        name="_s(menu)"
+        color="glm::vec4(255)">
+      </MDAppBarAction>
+      <MDAppBarAction
+        name="_s(menu)"
+        color="glm::vec4(255)">
+      </MDAppBarAction>
+      <!-- <MDMenu
+        body="mMenuBody">
+        <MDAppBarAction
+          name="_s(more_vert)">
+        </MDAppBarAction>
+      </MDMenu> -->
+    </Element>
+  </MDAppBar>
+
+  <Element>
+    <MDButton
+      element="mDrawerButton"
+      label="_s(BUTTON)">
+    </MDButton>
+
+    <MDOutlinedButton
+      marginLeft="20"
+      label="_s(BUTTON)">
+    </MDOutlinedButton>
+
+    <MDTextButton
+      marginLeft="20"
+      label="_s(BUTTON)">
+    </MDTextButton>
+  </Element>
+   <Element
+    marginTop="10">
+    <MDFloatingActionButton
+      icon='new MDIcon("add", 18, glm::vec4(255))'>
+    </MDFloatingActionButton>
+
+    <MDFloatingActionButtonExtended
+      marginLeft="20"
+      icon='new MDIcon("add", 18, glm::vec4(255))'
+      label="_s(BUTTON)">
+    </MDFloatingActionButtonExtended>
+  </Element>
+  <MDBottomNavigationBar>
+    <MDBottomNavigationBarItem
+      title="_s(Comments)"
+      icon="_s(comment)">
+    </MDBottomNavigationBarItem>
+    <MDBottomNavigationBarItem
+      title="_s(Calendar)"
+      icon="_s(calendar_today)">
+    </MDBottomNavigationBarItem>
+    <MDBottomNavigationBarItem
+      title="_s(Account)"
+      icon="_s(account_circle)">
+    </MDBottomNavigationBarItem>
+  </MDBottomNavigationBar>
+
+  <MDDrawer
+    element="mDrawer">
+    <MDElement
+      width="m: 80%, d: 400"
+      height="100%"
+      overflow="Hidden"
+      backgroundColor="MDTheme::Get()->Surface"
+      alignItemsVer="Start"
+      orientation="Vertical"
+      borderRadius="glm::vec4(0, 16, 16, 0)">
+
+      <!-- <Element
+        width="100%"
+        height="30%"
+        backgroundColor="MDColors::Primary::Get()">
+
+      </Element> -->
+      <!-- <MDListTile
+        element="mItem1"
+        leading='new MDIcon("favorite", 18, MDColors::Grey::Get())'
+        title="_s(Item One)">
+      </MDListTile>
+      <MDListTile
+        element="mItem2"
+        leading='new MDIcon("comment", 18, MDColors::Grey::Get())'
+        title="_s(Item Two)">
+      </MDListTile> -->
+
+    </MDElement>
+  </MDDrawer>
+</MDElement>

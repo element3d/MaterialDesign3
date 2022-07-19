@@ -1,0 +1,94 @@
+<MDElement
+  backgroundColor="MDTheme::Get()->SurfaceVariant"
+  orientation="Vertical"
+  overflow="Scroll"
+  alignItemsHor="Center">
+
+  <MDRow>
+    <MainMenuItem element="mAppBarPage"></MainMenuItem>
+    <MainMenuItem
+        element="mButtonPage"
+        icon="_s(crop_7_5)"
+        title="_s(Кнопки)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow> 
+    <MainMenuItem
+      element="mBottomNavBarPage"
+      icon="_s(video_label)"
+      title="_s(Bottom navbar)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mDrawerPage"
+      icon="_s(menu)"
+      title="_s(Drawer)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mBottomSheetPage"
+      icon="_s(video_label)"
+      title="_s(Bottom sheet)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mNavRailPage"
+      icon="_s(video_label)"
+      title="_s(Navigation rail)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mDialogPage"
+      icon="_s(crop_square)"
+      title="_s(Dialog)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mMenuPage"
+      icon="_s(more_vert)"
+      title="_s(Menu)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mProgressIndicatorsPage"
+      icon="_s(refresh)"
+      title="_s(Progress indicators)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mSelectionControlsPage"
+      icon="_s(check_box)"
+      title="_s(Selection controls)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mSlidersPage"
+      icon="_s(linear_scale)"
+      title="_s(Sliders)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mTabsPage"
+      icon="_s(tab)"
+      title="_s(Tabs)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mTextFieldsPage"
+      icon="_s(input)"
+      title="_s(Text fields)">
+    </MainMenuItem>
+    <MainMenuItem
+      element="mListPage"
+      icon="_s(list)"
+      title="_s(List)">
+    </MainMenuItem>
+  </MDRow>
+  <MDRow>
+    <MainMenuItem
+      element="mSnackbarPage"
+      icon="_s(input)"
+      title="_s(Snackbar)">
+    </MainMenuItem>
+  </MDRow>
+</MDElement>

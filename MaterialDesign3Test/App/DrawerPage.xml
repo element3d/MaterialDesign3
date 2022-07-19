@@ -1,0 +1,76 @@
+<MDElement
+  orientation="Vertical"
+  overflow="Scroll"
+  alignItemsHor="Center"
+  alignItemsVer="Start"
+  paddingBottom="50dp"
+  backgroundColor="MDTheme::Get()->SurfaceVariant">
+
+
+  <Element
+    width="100%"
+    height="m: 0, d: 40"
+    alignItemsHor="Start">
+    <MDIconButton
+      element="mBack"
+      name="_s(arrow_back)">
+    </MDIconButton>
+  </Element>
+
+
+
+  <MDScaffold
+    marginTop="m: 0, d: 50"
+    width="m: 100%, d: 500"
+    height="m: 100%, d: 700"
+    orientation="Vertical"
+    backgroundColor="all: 255">
+    <MDAppBar
+      alignItemsHor="Start">
+      <MDAppBarAction
+        element="mDrawerButton"
+        name="_s(menu)"
+        color="glm::vec4(255)">
+      </MDAppBarAction>
+      <MDAppBarTitle
+        text="Drawer">
+      </MDAppBarTitle>
+    </MDAppBar>
+    <Element
+      width="100%"
+      height="100%"
+      orientation="Vertical"
+      scaling="Shrink">
+
+     
+    </Element>
+    <MDDrawer
+      element="mDrawer">
+      <MDElement
+        width="m: 80%, d: 60%"
+        height="100%"
+        overflow="Hidden"
+        alignItemsVer="Start"
+        orientation="Vertical">
+
+        <Element
+          width="100%"
+          height="30%">
+
+        </Element>
+        <MDListTile
+          element="mItem1"
+          leading='new MDIcon("favorite", 24 , MDColors::Grey::Get())'
+          title="_s(Item One)">
+        </MDListTile>
+        <MDListTile
+          element="mItem2"
+          leading='new MDIcon("comment", 24, MDColors::Grey::Get())'
+          title="_s(Item Two)">
+        </MDListTile>
+
+      </MDElement>
+    </MDDrawer>
+  </MDScaffold>
+
+</MDElement>

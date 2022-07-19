@@ -1,0 +1,8 @@
+<Projects>
+	<MaterialDesign3 type="Lib"/>
+	<MaterialDesign3Test type="App">
+		<Desktop/>
+		<Android/>
+	</MaterialDesign3Test>
+</Projects>
+

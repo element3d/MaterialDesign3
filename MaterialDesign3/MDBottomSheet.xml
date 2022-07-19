@@ -1,0 +1,17 @@
+<MDElement
+  width="100%"
+  height="100%"
+  positionType="Absolute"
+  bottom="0"
+  visibility="Gone"
+  alignItemsVer="End"
+  overflow="Hidden">
+
+  <!-- <MDElement
+    width="100dp"
+    height="10dp"
+    backgroundColor="glm::vec4(0, 0, 0, 255)"
+    borderRadius="all: 0.5">
+  </MDElement> -->
+
+</MDElement>
