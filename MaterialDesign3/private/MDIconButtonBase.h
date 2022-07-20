@@ -30,4 +30,5 @@ MDIcon* mIcon = nullptr;
 
 };
 
-#e
+#endif // __MDIconButtonBase_H__
+

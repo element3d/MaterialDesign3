@@ -8,4 +8,6 @@ MDAppBarBase::MDAppBarBase(e3::Element* pParent)
 {
         this->SetWidth("100%");
         this->SetHeight("60dp");
-        this->SetOverflow((e3::EOverfl
+        this->SetOverflow((e3::EOverflow)0);
+
+}

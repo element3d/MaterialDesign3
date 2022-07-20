@@ -22,4 +22,6 @@ MDIconButtonBase::MDIconButtonBase(e3::Element* pParent)
         mRipple->SetShapeType((e3::EShapeType)1);
         mIcon = new MDIcon();
         AddElement(mIcon);
-        
+        mIcon->SetMargin(0);
+
+}

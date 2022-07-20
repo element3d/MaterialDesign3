@@ -1,13 +1,13 @@
 
-#ifndef __APP_MaterialDesign3_H__
-#define __APP_MaterialDesign3_H__
+#ifndef __APP_MDLite_H__
+#define __APP_MDLite_H__
 
 #include <e3.h>
 #include <string>
 #include <glm/glm.hpp>
 #include <e3/Types.h>
 
-namespace MaterialDesign3
+namespace MDLite
 {
 	class E3_EXPORT Strings 
 	{
@@ -28,5 +28,5 @@ namespace MaterialDesign3
 	
 	};
 }
-#endif // __APP_MaterialDesign3_H__
+#endif // __APP_MDLite_H__
 

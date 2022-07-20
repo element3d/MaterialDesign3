@@ -28,3 +28,5 @@ protected:
 
 };
 
+#endif // __MDAppBarBase_H__
+

@@ -12,4 +12,6 @@ MDBottomSheetBase::MDBottomSheetBase(e3::Element* pParent)
         this->SetBottom(0);
         this->SetVisibility((e3::EVisibility)1);
         this->SetAlignItemsVer((e3::EAlignment)1);
-        this->SetOverflow((e3::EOv
+        this->SetOverflow((e3::EOverflow)0);
+
+}
