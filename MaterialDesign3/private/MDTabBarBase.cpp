@@ -26,14 +26,18 @@ MDTabBarBase::MDTabBarBase(e3::Element* pParent)
         mContent->SetOrientation((e3::EOrientation)0);
         mContent->SetWidth("100%");
         mContent->SetScaling((e3::EScaling)1);
+    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pElement1->AddElement(pElement2);
+        pElement2->SetWidth("100%");
+        pElement2->SetPositionType((e3::EPositionType)1);
+        pElement2->SetLeft(0);
+        pElement2->SetBottom(0);
+        pElement2->SetAlignItemsHor((e3::EAlignment)0);
+        pElement2->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
         mSelection = new MDElement();
-        pElement1->AddElement(mSelection);
-        mSelection->SetPositionType((e3::EPositionType)1);
-        mSelection->SetLeft(0);
-        mSelection->SetBottom(0);
+        pElement2->AddElement(mSelection);
         mSelection->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
         mSelection->SetWidth("100%");
-        mSelection->SetHeight(e3::Dim("2", "2", "4", "2", "2", "2"));
-        mSelection->SetScaling((e3::EScaling)2);
+        mSelection->SetHeight("2dp");
 
 }

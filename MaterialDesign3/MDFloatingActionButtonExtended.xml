@@ -1,6 +1,7 @@
 <MDInkWell
   height="56dp"
   padding="16dp"
+  minWidth="80dp"
   borderRadius='e3::Dim("16dp")'
   overflow="Hidden"
   backgroundColor="glm::vec4(96, 2, 238, 255)">
@@ -21,10 +22,10 @@
   </Element>
 
   <Shadow
-    color="all: 100"
+    color="all: 60"
     opacity="1.0"
-    offset="x: 0, y: 2"
-    blurSize='e3::Dim("4dp")'>
+    offset="x: 0, y: 8"
+    blurSize='e3::Dim("8dp")'>
   </Shadow>
 
 </MDInkWell>

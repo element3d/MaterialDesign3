@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m: 0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
@@ -16,12 +16,11 @@
     </MDIconButton>
   </Element>
 
-  <Element
+  <MDScaffold
     marginTop="m: 0, d: 20"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -50,7 +49,7 @@
         marginTop="m: 90, d: 30">   
       </MDSlider>
     </Element>
-  </Element>
+  </MDScaffold>
 
 
 

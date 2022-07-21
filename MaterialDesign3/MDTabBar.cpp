@@ -53,13 +53,13 @@ void MDTabBar::AddElement(MDTab* pTab)
 	pTab->SetOnClickCallback([this, pTab, index](e3::MouseEvent*) {
 		if (mOnTabSelectCallback) mOnTabSelectCallback(pTab);
 
-//		if (mTabBarView) mTabBarView->SetIndex(index);
+		if (mTabBarView) mTabBarView->SetIndex(index);
 		auto g = mSelection->GetGeometry();
 		mAnimation = new e3::Animation();
-		mAnimation->Start(0.3, [this, pTab, g](float v) {
-			mSelection->SetWidth(g.width + (pTab->GetGeometry().width - g.width) * v);
+		mAnimation->Start(0.2, [this, pTab, g](float v) {
+			mSelection->SetWidth(g.width + (pTab->GetLabelElement()->GetGeometry().width - g.width) * v);
 			float sx = GetGeometry().x;
-			mSelection->SetTranslation(glm::vec3(g.x - sx - mContent->GetScrollVec().x + (pTab->GetGeometry().x - g.x) * v, 0, 0));
+			mSelection->SetTranslation(glm::vec3(g.x - sx - mContent->GetScrollVec().x + (pTab->GetLabelElement()->GetGeometry().x - g.x) * v, 0, 0));
 		}, [this]() {
 			mAnimation = nullptr;
 		});

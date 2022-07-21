@@ -4,6 +4,11 @@
   overflow="Scroll"
   alignItemsHor="Center">
 
+  <MDSwitch
+    element="mDarkModeSwitch"
+    marginTop="20dp">
+  </MDSwitch>
+
   <MDRow>
     <MainMenuItem element="mAppBarPage"></MainMenuItem>
     <MainMenuItem

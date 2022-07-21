@@ -13,6 +13,11 @@ void MDTab::SetTextLabel(const std::string &textLabel)
 	mLabel->SetTextColor(pTheme->TextColor);*/
 }
 
+MDText* MDTab::GetLabelElement()
+{
+	return mLabel;
+}
+
 void MDTab::SetLeadingIcon(const std::string &leadingIcon)
 {
 	e3::Dim mIconDim = e3::Dim("20dp");
@@ -44,10 +49,10 @@ void MDTab::Unselect()
 	//glm::vec4 c = pTheme->TextColor;
 	glm::vec4 c = glm::vec4(255);
 	c.w = 150;
-	mTopIcon->SetColor(MDTheme::Get()->OnBackground);
+    mTopIcon->SetColor(MDTheme::Get()->OnSurfaceVariant);
 	//	if (mTopIcon) mTopIcon->SetColor(c);
 	//if (mLeadingIcon) mLeadingIcon->SetColor(c);
-	if (mLabel) mLabel->SetTextColor(MDTheme::Get()->OnBackground);
+    if (mLabel) mLabel->SetTextColor(MDTheme::Get()->OnSurfaceVariant);
 }
 
 void MDTab::OnMouseEnter(e3::MouseEvent *pEvent)

@@ -4,9 +4,13 @@
 MDSwitch::MDSwitch(e3::Element *pParent)
 		: MDSwitchBase(pParent)
 {
+    MDTheme::OnChangeCallback* pC = new MDTheme::OnChangeCallback([this](){
+        mValueColor = MDTheme::Get()->OnPrimary;
+    });
+    MDTheme::AddOnChangeCallback(pC);
 	//	mBack->SetBackgroundColor(MDColors::Grey::Get());
 	mCircle->SetBackgroundColor(MDColors::Grey::Get("600"));
-	mValueColor = MDTheme::Get()->PrimaryColor;
+    mValueColor = MDTheme::Get()->OnPrimary;
 	SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
 	SetBorderColor(MDTheme::Get()->Outline);
 
@@ -48,9 +52,9 @@ void MDSwitch::SetTranslation(const glm::vec3 &pos)
 	mCircle->SetTranslation(pos + glm::vec3(diff));
 }
 
-void MDSwitch::SetValueColor(MDColor *pColor)
+void MDSwitch::SetValueColor(const glm::vec4& color)
 {
-	mValueColor = pColor;
+    mValueColor = color;
 }
 
 void MDSwitch::Check()
@@ -58,7 +62,7 @@ void MDSwitch::Check()
 	mChecked = true;
 	if (mAnimation) return;
 	mAnimation = new e3::Animation();
-	MDColor* pColor = mValueColor;
+    glm::vec4 pColor = mValueColor;
 	/*	const MDTheme* pTheme = mTheme ? mTheme : Material::GetTheme();
 	switch (pTheme->ColorScheme)
 	{
@@ -81,9 +85,9 @@ void MDSwitch::Check()
 	mAnimation->Start(0.1, [this, pColor](float v) {
 		e3::Rect2f geo = GetGeometry();
 		mCircle->SetScale(glm::vec3(0.66 + 0.34 * v), e3::ETransformAlignment::Center);
-		mCircle->SetBackgroundColor(glm::mix(*(MDTheme::Get()->Outline), glm::vec4(*pColor), v));
+        mCircle->SetBackgroundColor(glm::mix((MDTheme::Get()->Outline), glm::vec4(mValueColor), v));
 		mCircle->SetTranslation(glm::vec3(v * (geo.width - mCircle->GetGeometry().width - e3::Dim("6dp")), 0, 0));
-		SetBackgroundColor(glm::mix(*(MDTheme::Get()->SurfaceVariant), glm::vec4(*(MDTheme::Get()->PrimaryColor)), v));
+        SetBackgroundColor(glm::mix((MDTheme::Get()->SurfaceVariant), glm::vec4((MDTheme::Get()->PrimaryColor)), v));
 		//glm::vec4 bgColor = glm::mix(*(MDTheme::Get()->Outline), *pColor, 0.36);
 		// mBack->SetBackgroundColor(glm::mix(MDColors::Grey::Get(), bgColor, v));
 	}, [this]() {
@@ -98,8 +102,8 @@ void MDSwitch::Uncheck()
 	mAnimation = new e3::Animation();
 
 	//const MDTheme* pTheme = mTheme ? mTheme : Material::GetTheme();
-	MDColor* pColor = mValueColor;
-	glm::vec4 bgColor = glm::mix(MDColors::Red::Get("100"), *pColor, 0.5);
+    glm::vec4 pColor = mValueColor;
+    glm::vec4 bgColor = glm::mix(MDColors::Red::Get("100"), pColor, 0.5);
 
 	/*switch (pTheme->ColorScheme)
 	{
@@ -122,9 +126,9 @@ void MDSwitch::Uncheck()
 	mAnimation->Start(0.1, [this, bgColor, pColor](float v) {
 		mCircle->SetScale(glm::vec3(0.66 + 0.34 * (1 - v)), e3::ETransformAlignment::Center);
 		e3::Rect2f geo = GetGeometry();
-		mCircle->SetBackgroundColor(glm::mix(*(MDTheme::Get()->Outline), glm::vec4(*pColor), 1 - v));
+        mCircle->SetBackgroundColor(glm::mix((MDTheme::Get()->Outline), glm::vec4(pColor), 1 - v));
 		mCircle->SetTranslation(glm::vec3((1 - v) * (geo.width - mCircle->GetGeometry().width - e3::Dim("6dp")), 0, 0));
-		SetBackgroundColor(glm::mix(*(MDTheme::Get()->SurfaceVariant), glm::vec4(*(MDTheme::Get()->PrimaryColor)), 1 - v));
+        SetBackgroundColor(glm::mix((MDTheme::Get()->SurfaceVariant), glm::vec4((MDTheme::Get()->PrimaryColor)), 1 - v));
 	//	mBack->SetBackgroundColor(glm::mix(MDColors::Grey::Get(), bgColor, 1 - v));
 	}, [this]() {
 		mAnimation = nullptr;

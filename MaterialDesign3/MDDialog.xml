@@ -10,7 +10,8 @@
     element="mBody"
     overflow="Hidden"
     orientation="Vertical"
-    borderRadius="all: 10">
+    borderRadius='e3::Dim("28dp")'
+    padding="16dp">
     <!-- <Shadow
       color="glm::vec4(50, 50, 50, 55)"
       blurSize="40"

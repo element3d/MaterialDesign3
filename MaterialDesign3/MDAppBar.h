@@ -9,8 +9,12 @@ class E3_EXPORT MDAppBar : public MDAppBarBase
 {
 public:
 	MDAppBar(e3::Element* pParent = nullptr);
+    ~MDAppBar();
 
 	virtual void Render() override;
+
+private:
+    MDTheme::OnChangeCallback* mOnThemeChangeCallback = nullptr;
 };
 
 #endif // MDAppBar_H_

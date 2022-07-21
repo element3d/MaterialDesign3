@@ -58,7 +58,7 @@ void MDCheckbox::Check()
 	mAnimation->Start(0.2, [this /*bgColor,*/](float v) {
 		//const MDTheme* pTheme = GetTheme();
 		e3::Rect2f geo = GetGeometry();
-		SetBackgroundColor(glm::mix(glm::vec4(0), *MDTheme::Get()->PrimaryColor, v));
+        SetBackgroundColor(glm::mix(glm::vec4(0), MDTheme::Get()->PrimaryColor, v));
 		glm::vec4 bc = MDColors::Grey::Get();
 		SetBorderColor(glm::vec4(glm::vec3(bc), 255 * (1 - v)));
 		mIcon->SetOpacity(v);
@@ -96,8 +96,8 @@ void MDCheckbox::Uncheck()
 
 	mAnimation->Start(0.2, [this /*bgColor,*/ /*pTheme*/](float v) {
 		e3::Rect2f geo = GetGeometry();
-		SetBackgroundColor(glm::mix(glm::vec4(0), /*pTheme->ColorPrimary*/*MDTheme::Get()->PrimaryColor, 1 - v));
-		SetBorderColor(glm::mix(MDColors::Grey::Get(), /*pTheme->ColorPrimary*/*MDTheme::Get()->PrimaryColor, 1 - v));
+        SetBackgroundColor(glm::mix(glm::vec4(0), /*pTheme->ColorPrimary*/MDTheme::Get()->PrimaryColor, 1 - v));
+        SetBorderColor(glm::mix(MDColors::Grey::Get(), /*pTheme->ColorPrimary*/MDTheme::Get()->PrimaryColor, 1 - v));
 		mIcon->SetOpacity(1 - v);
 	}, [this]() {
 		mAnimation = nullptr;

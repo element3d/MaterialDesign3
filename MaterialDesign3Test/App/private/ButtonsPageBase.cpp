@@ -1,7 +1,7 @@
 #include "ButtonsPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -10,7 +10,7 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
@@ -27,7 +27,6 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
         pCustomView1->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
         pCustomView1->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
         pCustomView1->SetOrientation((e3::EOrientation)1);
-        pCustomView1->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
                 MDAppBar* pCustomView2 = new MDAppBar();
         pCustomView1->AddElement(pCustomView2);
         pCustomView2->SetAlignItemsHor((e3::EAlignment)0);
@@ -43,9 +42,9 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
                 MDText* pCustomView4 = new MDText();
         pElement2->AddElement(pCustomView4);
         pCustomView4->SetText("MDIconButton");
-        pCustomView4->SetFontSize(e3::Dim("54", "54", "54", "18", "18", "18"));
+        pCustomView4->SetFontSize("18dp");
         pCustomView4->SetFontStyle((e3::EFontStyle)2);
-        pCustomView4->SetTextColor(MDTheme::Get()->OnBackground);
+        pCustomView4->SetTextColor(MDTheme::Get()->OnSurface);
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement3);
         pElement3->SetMarginTop("10dp");
@@ -57,9 +56,9 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
         pElement2->AddElement(pCustomView6);
         pCustomView6->SetMarginTop("40dp");
         pCustomView6->SetText("MDTextButton");
-        pCustomView6->SetFontSize(e3::Dim("54", "54", "54", "18", "18", "18"));
+        pCustomView6->SetFontSize("18dp");
         pCustomView6->SetFontStyle((e3::EFontStyle)2);
-        pCustomView6->SetTextColor(MDTheme::Get()->OnBackground);
+        pCustomView6->SetTextColor(MDTheme::Get()->OnSurface);
     e3::Element* pElement4 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement4);
         pElement4->SetMarginTop("10dp");
@@ -75,45 +74,45 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
         pElement2->AddElement(pCustomView9);
         pCustomView9->SetMarginTop("40dp");
         pCustomView9->SetText("MDButton");
-        pCustomView9->SetFontSize(e3::Dim("54", "54", "54", "18", "18", "18"));
+        pCustomView9->SetFontSize("18dp");
         pCustomView9->SetFontStyle((e3::EFontStyle)2);
-        pCustomView9->SetTextColor(MDTheme::Get()->OnBackground);
+        pCustomView9->SetTextColor(MDTheme::Get()->OnSurface);
     e3::Element* pElement5 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement5);
         pElement5->SetMarginTop("10dp");
                 MDButton* pCustomView10 = new MDButton();
         pElement5->AddElement(pCustomView10);
-        pCustomView10->SetLabel(_s(BUTTON));
+        pCustomView10->SetLabel(_s(Button));
                 MDButton* pCustomView11 = new MDButton();
         pElement5->AddElement(pCustomView11);
         pCustomView11->SetMarginLeft("20dp");
-        pCustomView11->SetLabel(_s(BUTTON));
+        pCustomView11->SetLabel(_s(Button));
         pCustomView11->SetIcon(new MDIcon("add", 36, glm::vec4(255)));
                 MDText* pCustomView12 = new MDText();
         pElement2->AddElement(pCustomView12);
         pCustomView12->SetMarginTop("40dp");
         pCustomView12->SetText("MDOutlinedButton");
-        pCustomView12->SetFontSize(e3::Dim("54", "54", "54", "18", "18", "18"));
+        pCustomView12->SetFontSize("18dp");
         pCustomView12->SetFontStyle((e3::EFontStyle)2);
-        pCustomView12->SetTextColor(MDTheme::Get()->OnBackground);
+        pCustomView12->SetTextColor(MDTheme::Get()->OnSurface);
     e3::Element* pElement6 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement6);
         pElement6->SetMarginTop("10dp");
                 MDOutlinedButton* pCustomView13 = new MDOutlinedButton();
         pElement6->AddElement(pCustomView13);
-        pCustomView13->SetLabel(_s(BUTTON));
+        pCustomView13->SetLabel(_s(Button));
                 MDOutlinedButton* pCustomView14 = new MDOutlinedButton();
         pElement6->AddElement(pCustomView14);
         pCustomView14->SetMarginLeft("20dp");
-        pCustomView14->SetLabel(_s(BUTTON));
+        pCustomView14->SetLabel(_s(Button));
         pCustomView14->SetIcon(new MDIcon("add", 18, MDColors::Primary::Get()));
                 MDText* pCustomView15 = new MDText();
         pElement2->AddElement(pCustomView15);
         pCustomView15->SetMarginTop("40dp");
         pCustomView15->SetText("MDFloatingActionButton");
-        pCustomView15->SetFontSize(e3::Dim("54", "54", "54", "18", "18", "18"));
+        pCustomView15->SetFontSize("18dp");
         pCustomView15->SetFontStyle((e3::EFontStyle)2);
-        pCustomView15->SetTextColor(MDTheme::Get()->OnBackground);
+        pCustomView15->SetTextColor(MDTheme::Get()->OnSurface);
     e3::Element* pElement7 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     pElement2->AddElement(pElement7);
         pElement7->SetMarginTop("10dp");
@@ -124,6 +123,6 @@ ButtonsPageBase::ButtonsPageBase(e3::Element* pParent)
         pElement7->AddElement(pCustomView17);
         pCustomView17->SetMarginLeft("20dp");
         pCustomView17->SetIcon(new MDIcon("add", 32, glm::vec4(255)));
-        pCustomView17->SetLabel(_s(BUTTON));
+        pCustomView17->SetLabel(_s(Extended FAB));
 
 }

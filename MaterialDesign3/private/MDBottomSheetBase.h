@@ -23,7 +23,8 @@ public:
 
  
 protected:
-	
+	e3::Element* mSheet = nullptr;
+
 
 };
 

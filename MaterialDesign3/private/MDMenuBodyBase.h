@@ -3,6 +3,7 @@
 #define __MDMenuBodyBase_H__
 
 #include <e3/ViewFactory.h>
+#include "MDTheme.h"
 
 
 class MDMenuBodyBase : public e3::DropdownBody

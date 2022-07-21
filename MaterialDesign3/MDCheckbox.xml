@@ -1,15 +1,15 @@
 <Element
-  width="m: (25, 30, 48), d: (24, 24, 24)"
+  width="24dp"
   aspectRatio="1"
-  borderSize="2"
+  borderSize="2dp"
   borderRadius="all: 0"
-  margin="8">
+  margin="8dp">
 
   <Element
     element="mRipple"
     positionType="Absolute"
     aspectRatio="1"
-    height="40"
+    height="40dp"
     shapeType="Circle">
   </Element>
 
@@ -17,7 +17,8 @@
     element="mIcon"
     name="_s(done)"
     color="MDTheme::Get()->OnPrimary"
-    width="m: (18, 18, 30), d: (18, 18, 18)"
+    width="18dp"
+    opacity="0"
     aspectRatio="1">
   </MDIcon> 
 

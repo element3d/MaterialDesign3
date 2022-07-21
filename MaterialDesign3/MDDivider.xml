@@ -1,5 +1,6 @@
 <MDElement
   width="100%"
-  height="m: (1, 1, 2), d: 1">
-  <include path="MDColors.h" />
+  height="1dp"
+  backgroundColor="MDTheme::Get()->Outline">
+  <include path="MDTheme.h" />
 </MDElement>

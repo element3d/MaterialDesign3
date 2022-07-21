@@ -9,6 +9,7 @@ public:
     Application(const std::string& applicationName, e3::EE3OS os, e3::EE3Target target, e3::Size2i windowSize, e3::Size2i resolution);
 
 public:
+	bool OnBack();
 	void OnResize(float width, float height) override;
 };
 

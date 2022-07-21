@@ -15,6 +15,7 @@ MDDialogBase::MDDialogBase(e3::Element* pParent)
         AddElement(mBody);
         mBody->SetOverflow((e3::EOverflow)0);
         mBody->SetOrientation((e3::EOrientation)1);
-        mBody->SetBorderRadius(glm::vec4(10.000000, 10.000000, 10.000000, 10.000000));
+        mBody->SetBorderRadius(e3::Dim("28dp"));
+        mBody->SetPadding("16dp");
 
 }

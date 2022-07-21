@@ -5,12 +5,15 @@
 #include "private/MDListTileBase.h"
 #include "MDPopTransitionAnimation.h"
 #include "MDPushTransitionAnimation.h"
+#include "MDIcon.h"
+
 class E3_EXPORT MDListTile : public MDListTileBase
 {
 public:
 	MDListTile(e3::Element* pParent = nullptr);
 
 	void SetLeading(e3::Element* pElement);
+	void SetLeading(const std::string& iconName);
 	void SetTitle(const std::string& title, bool translate = false);
 	void SetSubtitle(const std::string& subtitle, bool translate = false);
 	void SetTrailing(e3::Element* pElement);

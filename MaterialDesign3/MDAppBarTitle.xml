@@ -1,5 +1,5 @@
 <MDText
-  fontSize="m: 54, d: 18"
+  fontSize="18dp"
   fontStyle="Bold"
-  marginLeft="m: 60, d: 20">
+  marginLeft="20dp">
 </MDText>

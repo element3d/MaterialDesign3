@@ -11,7 +11,7 @@ public:
 	MDIcon(e3::Element* pParent = nullptr);
 	MDIcon(const std::string& name, int size, const glm::vec4& color);
 
-	void SetColor(MDColor* pColor);
+//	void SetColor(MDColor* pColor);
 	void SetColor(const glm::vec4& color);
 
 public:

@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m: 0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
@@ -20,8 +20,7 @@
     marginTop="m: 0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -36,14 +35,14 @@
 
       <MDButton
         element="mDialogButton"
-        label="_s(SHOW DIALOG)">
+        label="_s(Show dialog)">
       </MDButton>
      
     </Element>
     <MDDialog
       element="mDialog"
-      width="m: 840, d: 280"
-      height="m: 450, d: 150">
+      width="280dp"
+      height="150dp">
 
       <Element
         height="100%"
@@ -54,10 +53,10 @@
         width="100%"
         alignItemsHor="End">
         <MDTextButton
-          label="_s(CANCEL)">
+          label="_s(Cancel)">
         </MDTextButton>
         <MDTextButton
-          label="_s(DISCARD)">
+          label="_s(Discard)">
         </MDTextButton>
       </Element>
 

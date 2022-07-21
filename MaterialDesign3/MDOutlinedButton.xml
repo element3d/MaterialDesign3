@@ -3,7 +3,7 @@
 
   borderColor="MDColors::Primary::Get()"
   borderRadius="all: 0.5"
-  borderSize="2dp">
+  borderSize="1dp">
   <!-- minWidth="m: (100, 150, 300), d: (100, 100, 100)"
   paddingLeft="16"
   paddingRight="16" -->
@@ -23,7 +23,7 @@
     fontStyle="Bold"
     marginRight="24dp"
     marginLeft="24dp"
-    fontSize="18dp"
+    fontSize="16dp"
     textColor="glm::vec4(96, 2, 238, 255)">
   </Text>
   <Element

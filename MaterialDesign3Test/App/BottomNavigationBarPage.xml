@@ -3,8 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
-  backgroundColor="MDTheme::Get()->SurfaceVariant">
+  paddingBottom="m: 0, d: 50">
 
   <var
     name="mMenuBody">
@@ -37,8 +36,7 @@
     marginTop="m: 0, d:50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="SpaceBetween">
       <MDAppBarTitle

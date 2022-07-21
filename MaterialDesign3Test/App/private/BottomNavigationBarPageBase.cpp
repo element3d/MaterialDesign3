@@ -1,7 +1,7 @@
 #include "BottomNavigationBarPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 BottomNavigationBarPageBase::BottomNavigationBarPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -22,8 +22,7 @@ BottomNavigationBarPageBase::BottomNavigationBarPageBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
-        this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
         pElement1->SetWidth("100%");
@@ -38,7 +37,6 @@ BottomNavigationBarPageBase::BottomNavigationBarPageBase(e3::Element* pParent)
         pCustomView5->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
         pCustomView5->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
         pCustomView5->SetOrientation((e3::EOrientation)1);
-        pCustomView5->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
                 MDAppBar* pCustomView6 = new MDAppBar();
         pCustomView5->AddElement(pCustomView6);
         pCustomView6->SetAlignItemsHor((e3::EAlignment)3);

@@ -1,6 +1,5 @@
 <MDInkWell
   height="m: (35, 55, 100), d: 40"
-  margin="4"
   borderRadius="all: 0.5"
   overflow="Hidden">
   <!-- minWidth="m: (100, 150, 300), d: (100, 100, 100)" -->
@@ -14,9 +13,9 @@
   <MDText
     element="mLabel"
     fontStyle="Bold"
-    marginRight="m: (20, 20, 30), d: 12"
-    marginLeft="m: (20, 20, 30), d: 12"
-    fontSize="m: (18, 22, 40), d: 18">
+    marginRight="12dp"
+    marginLeft="12dp"
+    fontSize="16dp">
   </MDText>
   <Element
     element="mHover"

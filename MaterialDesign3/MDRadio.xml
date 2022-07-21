@@ -1,9 +1,9 @@
 <Element
-  width="m: (22, 33, 50), d: (22, 20, 20)"
-  height="m: (22, 33, 50), d: (20, 20, 20)"
+  width="20dp"
+  aspectRatio="1"
   shapeType="Circle"
   borderSize="2dp"
-  margin="m: (8, 8, 25), d: 8"
+  margin="8dp"
   borderColor="glm::vec4(96, 2, 238, 255)">
 
   <Element
@@ -16,8 +16,8 @@
 
   <Element
     element="mCheck"
-    width="m: (10, 15, 25), d: (10, 10, 10)"
-    height="m: (10, 15, 25), d: (10, 10, 10)"
+    width="10dp"
+    aspectRatio="1"
     shapeType="Circle">
   </Element>
 

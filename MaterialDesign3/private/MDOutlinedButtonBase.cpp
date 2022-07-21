@@ -9,7 +9,7 @@ MDOutlinedButtonBase::MDOutlinedButtonBase(e3::Element* pParent)
         this->SetHeight("40dp");
         this->SetBorderColor(MDColors::Primary::Get());
         this->SetBorderRadius(glm::vec4(0.500000, 0.500000, 0.500000, 0.500000));
-        this->SetBorderSize("2dp");
+        this->SetBorderSize("1dp");
     mIconCont = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mIconCont);
         mLabel = e3::ViewFactory::CreateText();
@@ -17,7 +17,7 @@ MDOutlinedButtonBase::MDOutlinedButtonBase(e3::Element* pParent)
         mLabel->SetFontStyle((e3::EFontStyle)2);
         mLabel->SetMarginRight("24dp");
         mLabel->SetMarginLeft("24dp");
-        mLabel->SetFontSize("18dp");
+        mLabel->SetFontSize("16dp");
         mLabel->SetTextColor(glm::vec4(96, 2, 238, 255));
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);

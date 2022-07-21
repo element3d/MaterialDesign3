@@ -6,23 +6,23 @@
 MainMenuItemBase::MainMenuItemBase(e3::Element* pParent)
 	: MDInkWell(pParent)
 {
-        this->SetWidth(e3::Dim("450", "450", "450", "150", "150", "150"));
-        this->SetHeight(e3::Dim("450", "450", "450", "150", "150", "150"));
-        this->SetMargin(e3::Dim("30", "30", "30", "10", "10", "10"));
+        this->SetWidth("150dp");
+        this->SetAspectRatio(1.000000);
+        this->SetMargin("10dp");
         this->SetOrientation((e3::EOrientation)1);
         this->SetBorderRadius(e3::Dim("20dp"));
         this->SetBackgroundColor(MDTheme::Get()->Surface);
         mIcon = new MDIcon();
         AddElement(mIcon);
         mIcon->SetName(_s(web_asset));
-        mIcon->SetWidth(e3::Dim("108", "108", "108", "36", "36", "36"));
-        mIcon->SetHeight(e3::Dim("108", "108", "108", "36", "36", "36"));
+        mIcon->SetWidth("36dp");
+        mIcon->SetAspectRatio(1.000000);
         mIcon->SetColor(MDTheme::Get()->PrimaryColor);
         mTitle = new MDText();
         AddElement(mTitle);
         mTitle->SetText("App bar");
         mTitle->SetTextColor(MDTheme::Get()->PrimaryColor);
-        mTitle->SetFontSize(e3::Dim("48", "48", "48", "14", "14", "14"));
+        mTitle->SetFontSize("14dp");
         mTitle->SetFontStyle((e3::EFontStyle)2);
 
 }

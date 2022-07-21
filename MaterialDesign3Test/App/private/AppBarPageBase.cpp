@@ -1,7 +1,7 @@
 #include "AppBarPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 AppBarPageBase::AppBarPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -30,43 +30,40 @@ AppBarPageBase::AppBarPageBase(e3::Element* pParent)
         pElement1->AddElement(mBack);
         mBack->SetColor(MDTheme::Get()->OnBackground);
         mBack->SetName(_s(arrow_back));
-                MDScaffold* pCustomView5 = new MDScaffold();
-        AddElement(pCustomView5);
-        pCustomView5->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
-        pCustomView5->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
-        pCustomView5->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
-        pCustomView5->SetOrientation((e3::EOrientation)1);
-        pCustomView5->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
-                MDAppBar* pCustomView6 = new MDAppBar();
-        pCustomView5->AddElement(pCustomView6);
-        pCustomView6->SetAlignItemsHor((e3::EAlignment)3);
+        mScaffold = new MDScaffold();
+        AddElement(mScaffold);
+        mScaffold->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
+        mScaffold->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
+        mScaffold->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
+        mScaffold->SetOrientation((e3::EOrientation)1);
+        mScaffold->SetBackgroundColor(MDTheme::Get()->Background);
+                MDAppBar* pCustomView5 = new MDAppBar();
+        mScaffold->AddElement(pCustomView5);
+        pCustomView5->SetAlignItemsHor((e3::EAlignment)3);
     e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pCustomView6->AddElement(pElement2);
-                MDAppBarAction* pCustomView7 = new MDAppBarAction();
+    pCustomView5->AddElement(pElement2);
+                MDAppBarAction* pCustomView6 = new MDAppBarAction();
+        pElement2->AddElement(pCustomView6);
+        pCustomView6->SetName(_s(menu));
+                MDAppBarTitle* pCustomView7 = new MDAppBarTitle();
         pElement2->AddElement(pCustomView7);
-        pCustomView7->SetName(_s(menu));
-        pCustomView7->SetColor(glm::vec4(255));
-                MDAppBarTitle* pCustomView8 = new MDAppBarTitle();
-        pElement2->AddElement(pCustomView8);
-        pCustomView8->SetText("App bar");
+        pCustomView7->SetText("App bar");
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pCustomView6->AddElement(pElement3);
+    pCustomView5->AddElement(pElement3);
+                MDAppBarAction* pCustomView8 = new MDAppBarAction();
+        pElement3->AddElement(pCustomView8);
+        pCustomView8->SetName(_s(menu));
                 MDAppBarAction* pCustomView9 = new MDAppBarAction();
         pElement3->AddElement(pCustomView9);
         pCustomView9->SetName(_s(menu));
-        pCustomView9->SetColor(glm::vec4(255));
-                MDAppBarAction* pCustomView10 = new MDAppBarAction();
+                MDMenu* pCustomView10 = new MDMenu();
         pElement3->AddElement(pCustomView10);
-        pCustomView10->SetName(_s(menu));
-        pCustomView10->SetColor(glm::vec4(255));
-                MDMenu* pCustomView11 = new MDMenu();
-        pElement3->AddElement(pCustomView11);
-        pCustomView11->SetBody(mMenuBody);
-                MDAppBarAction* pCustomView12 = new MDAppBarAction();
-        pCustomView11->AddElement(pCustomView12);
-        pCustomView12->SetName(_s(more_vert));
+        pCustomView10->SetBody(mMenuBody);
+                MDAppBarAction* pCustomView11 = new MDAppBarAction();
+        pCustomView10->AddElement(pCustomView11);
+        pCustomView11->SetName(_s(more_vert));
     e3::Element* pElement4 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pCustomView5->AddElement(pElement4);
+    mScaffold->AddElement(pElement4);
         pElement4->SetWidth("100%");
         pElement4->SetHeight("100%");
         pElement4->SetOrientation((e3::EOrientation)1);

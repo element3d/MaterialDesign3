@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m: 0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
@@ -16,12 +16,11 @@
     </MDIconButton>
   </Element>
 
-  <Element
+  <MDScaffold
     marginTop="m: 0, d: 20"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -40,15 +39,15 @@
         isScrollable="false">
         <MDTab
           leadingIcon="_s(favorite)"
-          textLabel="_s(RED)">
+          textLabel="_s(Red)">
         </MDTab>
         <MDTab
           leadingIcon="_s(favorite)"
-          textLabel="_s(ORANGE)">
+          textLabel="_s(Orange)">
         </MDTab>
         <MDTab
           leadingIcon="_s(favorite)"
-          textLabel="_s(GREEN)">
+          textLabel="_s(Green)">
         </MDTab>
       </MDTabBar>
       <MDTabBarView
@@ -59,27 +58,30 @@
         scaling="Shrink">
 
         <Element>
-          <Text
-            text="RED"
+          <MDText
+            text="Red"
+            textColor="MDTheme::Get()->OnSurface"
             fontSize="30dp">
-          </Text>
+          </MDText>
         </Element>
         <Element>
-          <Text
+          <MDText
             text="Orange"
+            textColor="MDTheme::Get()->OnSurface"
             fontSize="30dp">
-          </Text>
+          </MDText>
         </Element>
         <Element>
-          <Text
-            text="GREEN"
+          <MDText
+            text="Green"
+            textColor="MDTheme::Get()->OnSurface"
             fontSize="30dp">
-          </Text>
+          </MDText>
         </Element>
 
       </MDTabBarView>
     </Element>
-  </Element>
+  </MDScaffold>
 
 
   

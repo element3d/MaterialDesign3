@@ -13,7 +13,6 @@ public:
 
 	void SetName(const std::string& name);
 	void SetColor(const glm::vec4& color);
-	void SetColor(MDColor* pColor);
 
 	virtual void OnMouseHover(e3::MouseEvent* pEvent) override;
 	virtual void OnMouseEnter(e3::MouseEvent* pEvent) override;

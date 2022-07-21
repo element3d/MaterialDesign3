@@ -4,6 +4,7 @@
 
 #include <e3/ViewFactory.h>
 #include <MDIconButton.h>
+#include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
 #include <MDInput.h>

@@ -6,8 +6,8 @@
 MDIconButtonBase::MDIconButtonBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth(e3::Dim("20", "20", "156", "52", "52", "52"));
-        this->SetHeight(e3::Dim("20", "20", "156", "52", "52", "52"));
+        this->SetWidth("52dp");
+        this->SetHeight("52dp");
     mBackground = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mBackground);
         mBackground->SetPositionType((e3::EPositionType)1);

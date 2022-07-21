@@ -6,8 +6,8 @@
 MDIconBase::MDIconBase(e3::Element* pParent)
 	: e3::FontIcon(pParent)
 {
-        this->SetWidth(e3::Dim("20", "20", "50", "20", "20", "20"));
-        this->SetHeight(e3::Dim("20", "20", "50", "20", "20", "20"));
-        this->SetMargin(e3::Dim("16", "16", "50", "16", "16", "16"));
+        this->SetWidth("20dp");
+        this->SetAspectRatio(1.000000);
+        this->SetMargin("16dp");
 
 }

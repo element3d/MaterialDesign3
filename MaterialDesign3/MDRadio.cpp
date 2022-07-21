@@ -40,15 +40,15 @@ void MDRadio::Check()
 	//const MDTheme* pTheme = GetTheme();//mTheme ? mTheme : Material::GetTheme();
 
 									   //mIsChecked = true;
-	SetBorderColor(*MDTheme::Get()->PrimaryColor);
-	mCheck->SetBackgroundColor(*MDTheme::Get()->PrimaryColor);
+    SetBorderColor(MDTheme::Get()->PrimaryColor);
+    mCheck->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
 
 	if (!mAnimation) mAnimation = new e3::Animation();
 	mAnimation->Start(0.1, [this/*, pTheme*/](float v) {
 		mCheck->SetWidth(v * mCheckDim);
 		mCheck->SetHeight(v * mCheckDim);
-		mCheck->SetBackgroundColor(*MDTheme::Get()->PrimaryColor);
-		SetBorderColor(glm::mix(MDColors::Grey::Get(), *MDTheme::Get()->PrimaryColor, v));
+        mCheck->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+        SetBorderColor(glm::mix(MDColors::Grey::Get(), MDTheme::Get()->PrimaryColor, v));
 	}, [this]() {
 		mAnimation = nullptr;
 		MDCheckable::Check();
@@ -69,7 +69,7 @@ void MDRadio::Uncheck()
 	mAnimation->Start(0.1, [this/*, pTheme*/](float v) {
 		mCheck->SetWidth((1 - v) * mCheckDim);
 		mCheck->SetHeight((1 - v) * mCheckDim);
-		SetBorderColor(glm::mix(MDColors::Grey::Get(), *MDTheme::Get()->PrimaryColor, 1 - v));
+        SetBorderColor(glm::mix(MDColors::Grey::Get(), MDTheme::Get()->PrimaryColor, 1 - v));
 	}, [this]() {
 		mAnimation = nullptr;
 		mCheck->SetBackgroundColor(glm::vec4(0));

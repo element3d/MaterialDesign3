@@ -1,7 +1,7 @@
 #include "DrawerPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 DrawerPageBase::DrawerPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -10,7 +10,7 @@ DrawerPageBase::DrawerPageBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
@@ -19,50 +19,71 @@ DrawerPageBase::DrawerPageBase(e3::Element* pParent)
         pElement1->SetAlignItemsHor((e3::EAlignment)0);
         mBack = new MDIconButton();
         pElement1->AddElement(mBack);
+        mBack->SetColor(MDTheme::Get()->OnSurface);
         mBack->SetName(_s(arrow_back));
-                MDScaffold* pCustomView1 = new MDScaffold();
-        AddElement(pCustomView1);
-        pCustomView1->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
-        pCustomView1->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
-        pCustomView1->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
-        pCustomView1->SetOrientation((e3::EOrientation)1);
-        pCustomView1->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
-                MDAppBar* pCustomView2 = new MDAppBar();
-        pCustomView1->AddElement(pCustomView2);
-        pCustomView2->SetAlignItemsHor((e3::EAlignment)0);
+        mScaffold = new MDScaffold();
+        AddElement(mScaffold);
+        mScaffold->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
+        mScaffold->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
+        mScaffold->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
+        mScaffold->SetOrientation((e3::EOrientation)1);
+        mScaffold->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
+                MDAppBar* pCustomView1 = new MDAppBar();
+        mScaffold->AddElement(pCustomView1);
+        pCustomView1->SetAlignItemsHor((e3::EAlignment)0);
         mDrawerButton = new MDAppBarAction();
-        pCustomView2->AddElement(mDrawerButton);
+        pCustomView1->AddElement(mDrawerButton);
         mDrawerButton->SetName(_s(menu));
-        mDrawerButton->SetColor(glm::vec4(255));
-                MDAppBarTitle* pCustomView3 = new MDAppBarTitle();
-        pCustomView2->AddElement(pCustomView3);
-        pCustomView3->SetText("Drawer");
+                MDAppBarTitle* pCustomView2 = new MDAppBarTitle();
+        pCustomView1->AddElement(pCustomView2);
+        pCustomView2->SetText("Drawer");
     e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pCustomView1->AddElement(pElement2);
+    mScaffold->AddElement(pElement2);
         pElement2->SetWidth("100%");
         pElement2->SetHeight("100%");
         pElement2->SetOrientation((e3::EOrientation)1);
         pElement2->SetScaling((e3::EScaling)1);
         mDrawer = new MDDrawer();
-        pCustomView1->AddElement(mDrawer);
-                MDElement* pCustomView4 = new MDElement();
-        mDrawer->AddElement(pCustomView4);
-        pCustomView4->SetWidth(e3::Dim("80%", "80%", "80%", "60%", "60%", "60%"));
-        pCustomView4->SetHeight("100%");
-        pCustomView4->SetOverflow((e3::EOverflow)0);
-        pCustomView4->SetAlignItemsVer((e3::EAlignment)0);
-        pCustomView4->SetOrientation((e3::EOrientation)1);
+        mScaffold->AddElement(mDrawer);
+        mDrawer->SetScaffold(mScaffold);
+                MDElement* pCustomView3 = new MDElement();
+        mDrawer->AddElement(pCustomView3);
+        pCustomView3->SetWidth(e3::Dim("80%", "80%", "80%", "60%", "60%", "60%"));
+        pCustomView3->SetHeight("100%");
+        pCustomView3->SetOverflow((e3::EOverflow)0);
+        pCustomView3->SetAlignItemsVer((e3::EAlignment)0);
+        pCustomView3->SetOrientation((e3::EOrientation)1);
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pCustomView4->AddElement(pElement3);
+    pCustomView3->AddElement(pElement3);
         pElement3->SetWidth("100%");
         pElement3->SetHeight("30%");
+        pElement3->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+    e3::Element* pElement4 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pCustomView3->AddElement(pElement4);
+        pElement4->SetOrientation((e3::EOrientation)1);
+        pElement4->SetWidth("100%");
+        pElement4->SetPadding("24dp");
         mItem1 = new MDListTile();
-        pCustomView4->AddElement(mItem1);
-        mItem1->SetLeading(new MDIcon("favorite", 24 , MDColors::Grey::Get()));
-        mItem1->SetTitle(_s(Item One));
+        pElement4->AddElement(mItem1);
+        mItem1->SetLeading("search");
+        mItem1->SetTitle(_s(Search));
         mItem2 = new MDListTile();
-        pCustomView4->AddElement(mItem2);
-        mItem2->SetLeading(new MDIcon("comment", 24, MDColors::Grey::Get()));
-        mItem2->SetTitle(_s(Item Two));
+        pElement4->AddElement(mItem2);
+        mItem2->SetLeading("3d_rotation");
+        mItem2->SetTitle(_s(3D));
+                MDListTile* pCustomView4 = new MDListTile();
+        pElement4->AddElement(pCustomView4);
+        pCustomView4->SetLeading("double_arrow");
+        pCustomView4->SetTitle(_s(Accelerator));
+                MDListTile* pCustomView5 = new MDListTile();
+        pElement4->AddElement(pCustomView5);
+        pCustomView5->SetLeading("dashboard");
+        pCustomView5->SetTitle(_s(Dashboard));
+                MDDivider* pCustomView6 = new MDDivider();
+        pElement4->AddElement(pCustomView6);
+                MDListTile* pCustomView7 = new MDListTile();
+        pElement4->AddElement(pCustomView7);
+        pCustomView7->SetLeading("logout");
+        pCustomView7->SetTitle(_s(Logout));
 
 }

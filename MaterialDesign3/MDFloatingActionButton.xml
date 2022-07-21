@@ -3,8 +3,7 @@
   height="56dp"
   padding="16dp"
   borderRadius='e3::Dim("16dp")'
-  overflow="Hidden"
-  backgroundColor="glm::vec4(96, 2, 238, 255)">
+  overflow="Hidden">
 
   <!-- <Element
     element="mRipple"
@@ -31,9 +30,9 @@
     positionType="Absolute">
   </Element>
   <Shadow
-    color="all: 100"
-    opacity="1.0"
-    offset="x: 0, y: 2"
+    color="glm::vec4(100, 100, 100, 250)"
+    opacity="0.6"
+    offset="x: 0, y: 8"
     blurSize='e3::Dim("4dp")'>
   </Shadow>
 

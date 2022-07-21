@@ -1,7 +1,7 @@
 #include "MenuPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 MenuPageBase::MenuPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -34,12 +34,13 @@ MenuPageBase::MenuPageBase(e3::Element* pParent)
         mContextMenu->SetBody(mContextMenuBody);
                 MDIconButton* pCustomView9 = new MDIconButton();
         mContextMenu->AddElement(pCustomView9);
+        pCustomView9->SetColor(MDTheme::Get()->OnSurface);
         pCustomView9->SetName(_s(more_vert));
         this->SetOrientation((e3::EOrientation)1);
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
@@ -49,52 +50,50 @@ MenuPageBase::MenuPageBase(e3::Element* pParent)
         mBack = new MDIconButton();
         pElement1->AddElement(mBack);
         mBack->SetName(_s(arrow_back));
-    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    AddElement(pElement2);
-        pElement2->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
-        pElement2->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
-        pElement2->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
-        pElement2->SetOrientation((e3::EOrientation)1);
-        pElement2->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
-                MDAppBar* pCustomView10 = new MDAppBar();
-        pElement2->AddElement(pCustomView10);
-        pCustomView10->SetAlignItemsHor((e3::EAlignment)0);
-                MDAppBarTitle* pCustomView11 = new MDAppBarTitle();
+                MDScaffold* pCustomView10 = new MDScaffold();
+        AddElement(pCustomView10);
+        pCustomView10->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
+        pCustomView10->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
+        pCustomView10->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
+        pCustomView10->SetOrientation((e3::EOrientation)1);
+                MDAppBar* pCustomView11 = new MDAppBar();
         pCustomView10->AddElement(pCustomView11);
-        pCustomView11->SetText("Menus");
-    e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pElement2->AddElement(pElement3);
-        pElement3->SetWidth("100%");
-        pElement3->SetHeight("100%");
-        pElement3->SetOrientation((e3::EOrientation)1);
-        pElement3->SetScaling((e3::EScaling)1);
+        pCustomView11->SetAlignItemsHor((e3::EAlignment)0);
+                MDAppBarTitle* pCustomView12 = new MDAppBarTitle();
+        pCustomView11->AddElement(pCustomView12);
+        pCustomView12->SetText("Menus");
+    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pCustomView10->AddElement(pElement2);
+        pElement2->SetWidth("100%");
+        pElement2->SetHeight("100%");
+        pElement2->SetOrientation((e3::EOrientation)1);
+        pElement2->SetScaling((e3::EScaling)1);
         e3::Text* pText1 = e3::ViewFactory::CreateText();
-        pElement3->AddElement(pText1);
+        pElement2->AddElement(pText1);
         pText1->SetText("Context menu");
         pText1->SetFontSize("18dp");
         pText1->SetFontStyle((e3::EFontStyle)2);
-        pText1->SetTextColor(MDColors::Grey::Get("800"));
-                MDListTile* pCustomView12 = new MDListTile();
-        pElement3->AddElement(pCustomView12);
-        pCustomView12->SetMarginTop("10dp");
-        pCustomView12->SetTitle(_s(An item with a context menu));
-        pCustomView12->SetTrailing(mContextMenu);
+        pText1->SetTextColor(MDTheme::Get()->OnSurface);
+                MDListTile* pCustomView13 = new MDListTile();
+        pElement2->AddElement(pCustomView13);
+        pCustomView13->SetMarginTop("10dp");
+        pCustomView13->SetTitle(_s(An item with a context menu));
+        pCustomView13->SetTrailing(mContextMenu);
         e3::Text* pText2 = e3::ViewFactory::CreateText();
-        pElement3->AddElement(pText2);
+        pElement2->AddElement(pText2);
         pText2->SetMarginTop("20dp");
         pText2->SetText("Simple menu");
         pText2->SetFontSize("18dp");
         pText2->SetFontStyle((e3::EFontStyle)2);
-        pText2->SetTextColor(MDColors::Grey::Get("800"));
-                MDMenu* pCustomView13 = new MDMenu();
-        pElement3->AddElement(pCustomView13);
-        pCustomView13->SetMarginTop("10dp");
-        pCustomView13->SetBody(mMenuBody1);
-                MDInkWell* pCustomView14 = new MDInkWell();
-        pCustomView13->AddElement(pCustomView14);
-        pCustomView14->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
-                MDListTile* pCustomView15 = new MDListTile();
+        pText2->SetTextColor(MDTheme::Get()->OnSurface);
+                MDMenu* pCustomView14 = new MDMenu();
+        pElement2->AddElement(pCustomView14);
+        pCustomView14->SetMarginTop("10dp");
+        pCustomView14->SetBody(mMenuBody1);
+                MDInkWell* pCustomView15 = new MDInkWell();
         pCustomView14->AddElement(pCustomView15);
-        pCustomView15->SetTitle(_s(An item with a simple menu));
+                MDListTile* pCustomView16 = new MDListTile();
+        pCustomView15->AddElement(pCustomView16);
+        pCustomView16->SetTitle(_s(An item with a simple menu));
 
 }

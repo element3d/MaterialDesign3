@@ -3,8 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
-  backgroundColor="MDTheme::Get()->SurfaceVariant">
+  paddingBottom="m: 0, d: 50">
 
   <var
     name="mRadioGroup">
@@ -22,12 +21,11 @@
     </MDIconButton>
   </Element>
 
-  <Element
+  <MDScaffold
     marginTop="m: 0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -44,7 +42,7 @@
         text="MDCheckbox"
         fontSize="18dp"
         fontStyle="Bold"
-        textColor='MDColors::Grey::Get("800")'>
+        textColor='MDTheme::Get()->OnSurface'>
       </Text>
       <Element
         marginTop="20dp">
@@ -52,21 +50,21 @@
           element="mCheckTest1"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()"
+          backgroundColor="MDTheme::Get()->OnSurface"
           marginRight="20dp">
         </Element>
         <Element
           element="mCheckTest2"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()"
+          backgroundColor="MDTheme::Get()->OnSurface"
           marginRight="20dp">
         </Element>
         <Element
           element="mCheckTest3"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()">
+          backgroundColor="MDTheme::Get()->OnSurface">
         </Element>
       </Element>
       <Element
@@ -89,7 +87,7 @@
         marginTop="40dp"
         fontSize="18dp"
         fontStyle="Bold"
-        textColor='MDColors::Grey::Get("800")'>
+        textColor='MDTheme::Get()->OnSurface'>
       </Text>
       <Element
         marginTop="20dp">
@@ -97,21 +95,21 @@
           element="mRadioTest1"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()"
+          backgroundColor="MDTheme::Get()->OnSurface"
           marginRight="10dp">
         </Element>
         <Element
           element="mRadioTest2"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()"
+          backgroundColor="MDTheme::Get()->OnSurface"
           marginRight="10dp">
         </Element>
         <Element
           element="mRadioTest3"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()">
+          backgroundColor="MDTheme::Get()->OnSurface">
         </Element>
       </Element>
       <Element>
@@ -134,7 +132,7 @@
         marginTop="40dp"
         fontSize="18dp"
         fontStyle="Bold"
-        textColor='MDColors::Grey::Get("800")'>
+        textColor='MDTheme::Get()->OnSurface'>
       </Text>
       <Element
         marginTop="20dp">
@@ -142,7 +140,7 @@
           element="mSwitchTest1"
           width="40dp"
           height="5dp"
-          backgroundColor="MDColors::Grey::Get()">
+          backgroundColor="MDTheme::Get()->OnSurface">
         </Element>
       </Element>
       <MDSwitch
@@ -150,6 +148,6 @@
         marginTop="20dp">
       </MDSwitch>
     </Element>
-  </Element>
+  </MDScaffold>
 
 </MDElement>

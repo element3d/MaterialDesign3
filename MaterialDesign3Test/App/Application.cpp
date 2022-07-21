@@ -7,6 +7,11 @@ Application::Application(const std::string& applicationName, e3::EE3OS os, e3::E
 	PushElement(new Main());
 }
 
+bool Application::OnBack()
+{
+	return e3::Application::OnBack(new MDPopTransitionAnimation(GetElement()));
+}
+
 void Application::OnResize(float width, float height)
 {
 

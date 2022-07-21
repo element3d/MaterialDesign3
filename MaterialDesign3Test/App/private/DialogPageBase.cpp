@@ -1,7 +1,7 @@
 #include "DialogPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 DialogPageBase::DialogPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -10,7 +10,7 @@ DialogPageBase::DialogPageBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
@@ -26,7 +26,6 @@ DialogPageBase::DialogPageBase(e3::Element* pParent)
         pCustomView1->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
         pCustomView1->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
         pCustomView1->SetOrientation((e3::EOrientation)1);
-        pCustomView1->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
                 MDAppBar* pCustomView2 = new MDAppBar();
         pCustomView1->AddElement(pCustomView2);
         pCustomView2->SetAlignItemsHor((e3::EAlignment)0);
@@ -41,11 +40,11 @@ DialogPageBase::DialogPageBase(e3::Element* pParent)
         pElement2->SetScaling((e3::EScaling)1);
         mDialogButton = new MDButton();
         pElement2->AddElement(mDialogButton);
-        mDialogButton->SetLabel(_s(SHOW DIALOG));
+        mDialogButton->SetLabel(_s(Show dialog));
         mDialog = new MDDialog();
         pCustomView1->AddElement(mDialog);
-        mDialog->SetWidth(e3::Dim("840", "840", "840", "280", "280", "280"));
-        mDialog->SetHeight(e3::Dim("450", "450", "450", "150", "150", "150"));
+        mDialog->SetWidth("280dp");
+        mDialog->SetHeight("150dp");
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     mDialog->AddElement(pElement3);
         pElement3->SetHeight("100%");
@@ -57,9 +56,9 @@ DialogPageBase::DialogPageBase(e3::Element* pParent)
         pElement4->SetAlignItemsHor((e3::EAlignment)1);
                 MDTextButton* pCustomView4 = new MDTextButton();
         pElement4->AddElement(pCustomView4);
-        pCustomView4->SetLabel(_s(CANCEL));
+        pCustomView4->SetLabel(_s(Cancel));
                 MDTextButton* pCustomView5 = new MDTextButton();
         pElement4->AddElement(pCustomView5);
-        pCustomView5->SetLabel(_s(DISCARD));
+        pCustomView5->SetLabel(_s(Discard));
 
 }

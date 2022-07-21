@@ -3,7 +3,7 @@
 MDScaffold::MDScaffold(e3::Element* pParent)
 	: MDScaffoldBase(pParent)
 {
-	SetBackgroundColor(MDTheme::Get()->ScaffoldBackgroundColor);
+    SetBackgroundColor(MDTheme::Get()->ScaffoldBackgroundColor);
 }
 
 void MDScaffold::Render()

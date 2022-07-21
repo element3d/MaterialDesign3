@@ -14,7 +14,6 @@ MDButtonBase::MDButtonBase(e3::Element* pParent)
     AddElement(mIconCont);
         mLabel = new MDText();
         AddElement(mLabel);
-        mLabel->SetTextColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
         mLabel->SetFontStyle((e3::EFontStyle)2);
         mLabel->SetTextColor(MDTheme::Get()->OnPrimary);
         mLabel->SetMarginRight("24dp");

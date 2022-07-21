@@ -8,15 +8,16 @@ MDFloatingActionButtonExtendedBase::MDFloatingActionButtonExtendedBase(e3::Eleme
 {
         this->SetHeight("56dp");
         this->SetPadding("16dp");
+        this->SetMinWidth("80dp");
         this->SetBorderRadius(e3::Dim("16dp"));
         this->SetOverflow((e3::EOverflow)0);
         this->SetBackgroundColor(glm::vec4(96, 2, 238, 255));
         e3::ShadowParams ShadowParams;
-        ShadowParams.Color = glm::vec4(100.000000, 100.000000, 100.000000, 255.000000);
-        ShadowParams.BlurSize = e3::Dim("4dp");
+        ShadowParams.Color = glm::vec4(60.000000, 60.000000, 60.000000, 255.000000);
+        ShadowParams.BlurSize = e3::Dim("8dp");
         ShadowParams.Opacity = 1.0;
         ShadowParams.Scale = 1.0;
-        ShadowParams.Offset = glm::ivec2(0, 2);
+        ShadowParams.Offset = glm::ivec2(0, 8);
         SetShadow(ShadowParams);
     mIconCont = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mIconCont);

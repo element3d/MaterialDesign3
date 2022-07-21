@@ -6,11 +6,11 @@
 MDRadioBase::MDRadioBase(e3::Element* pParent)
 	: e3::Element(pParent)
 {
-        this->SetWidth(e3::Dim("22", "33", "50", "22", "20", "20"));
-        this->SetHeight(e3::Dim("22", "33", "50", "20", "20", "20"));
+        this->SetWidth("20dp");
+        this->SetAspectRatio(1.000000);
         this->SetShapeType((e3::EShapeType)1);
         this->SetBorderSize("2dp");
-        this->SetMargin(e3::Dim("8", "8", "25", "8", "8", "8"));
+        this->SetMargin("8dp");
         this->SetBorderColor(glm::vec4(96, 2, 238, 255));
     mRipple = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mRipple);
@@ -20,8 +20,8 @@ MDRadioBase::MDRadioBase(e3::Element* pParent)
         mRipple->SetShapeType((e3::EShapeType)1);
     mCheck = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mCheck);
-        mCheck->SetWidth(e3::Dim("10", "15", "25", "10", "10", "10"));
-        mCheck->SetHeight(e3::Dim("10", "15", "25", "10", "10", "10"));
+        mCheck->SetWidth("10dp");
+        mCheck->SetAspectRatio(1.000000);
         mCheck->SetShapeType((e3::EShapeType)1);
 
 }

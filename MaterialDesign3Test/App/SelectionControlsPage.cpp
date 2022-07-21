@@ -9,33 +9,33 @@ SelectionControlsPage::SelectionControlsPage(e3::Element* pParent)
 	});
 
 	mCheckbox1->SetOnChangeCallback([this](bool checked) {
-		if (checked) mCheckTest1->SetBackgroundColor(MDColors::Primary::Get());
-		else mCheckTest1->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mCheckTest1->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mCheckTest1->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 	mCheckbox2->SetOnChangeCallback([this](bool checked) {
-		if (checked) mCheckTest2->SetBackgroundColor(MDColors::Primary::Get());
-		else mCheckTest2->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mCheckTest2->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mCheckTest2->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 	mCheckbox3->SetOnChangeCallback([this](bool checked) {
-		if (checked) mCheckTest3->SetBackgroundColor(MDColors::Primary::Get());
-		else mCheckTest3->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mCheckTest3->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mCheckTest3->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 
 	mRadio1->SetOnChangeCallback([this](bool checked) {
-		if (checked) mRadioTest1->SetBackgroundColor(MDColors::Primary::Get());
-		else mRadioTest1->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mRadioTest1->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mRadioTest1->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 	mRadio2->SetOnChangeCallback([this](bool checked) {
-		if (checked) mRadioTest2->SetBackgroundColor(MDColors::Primary::Get());
-		else mRadioTest2->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mRadioTest2->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mRadioTest2->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 	mRadio3->SetOnChangeCallback([this](bool checked) {
-		if (checked) mRadioTest3->SetBackgroundColor(MDColors::Primary::Get());
-		else mRadioTest3->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mRadioTest3->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mRadioTest3->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 
 	mSwitch->SetOnChangeCallback([this](bool checked) {
-		if (checked) mSwitchTest1->SetBackgroundColor(MDColors::Primary::Get());
-		else mSwitchTest1->SetBackgroundColor(MDColors::Grey::Get());
+		if (checked) mSwitchTest1->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+		else mSwitchTest1->SetBackgroundColor(MDTheme::Get()->OnSurface);
 	});
 }

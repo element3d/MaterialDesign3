@@ -30,7 +30,7 @@ void MDBottomNavigationBarItem::Select()
 	if (!mAnimation) mAnimation = new e3::Animation();
 	mAnimation->Start(0.2, [this](float v) {
 		mContainer->SetTranslation(glm::vec3(0, (1 - v) * mTitle->GetFontSize() / 2.0, 0));
-		glm::vec4 selectedColor = *MDTheme::Get()->BottomNavigationBarTheme.SelectedItemColor;
+        glm::vec4 selectedColor = MDTheme::Get()->BottomNavigationBarTheme.SelectedItemColor;
 		mTitle->SetTextColor(glm::vec4(glm::vec3(selectedColor), v * 255));
 		//mTitle->SetOpacity(v);
 	}, [this]() {
@@ -60,6 +60,8 @@ void MDBottomNavigationBarItem::Unselect()
 {
 	if (!mSelected) return;
 	mSelected = false;
+    glm::vec4 c = MDTheme::Get()->BottomNavigationBarTheme.UnselectedItemColor;
+
 	mIcon->SetColor(MDTheme::Get()->BottomNavigationBarTheme.UnselectedItemColor);
 	_DismissRipple();
 	if (!mAnimation) mAnimation = new e3::Animation();
@@ -67,7 +69,7 @@ void MDBottomNavigationBarItem::Unselect()
 		mContainer->SetTranslation(glm::vec3(0, v * mTitle->GetFontSize() / 2.0, 0));
 		//float opacity = mSelected ? v : 1 - v;
 		//mTitle->SetOpacity(opacity);
-		glm::vec4 selectedColor = *MDTheme::Get()->BottomNavigationBarTheme.SelectedItemColor;
+        glm::vec4 selectedColor = MDTheme::Get()->BottomNavigationBarTheme.SelectedItemColor;
 		mTitle->SetTextColor(glm::vec4(glm::vec3(selectedColor), (1 - v) * 255));
 	}, [this]() {
 		mAnimation = nullptr;

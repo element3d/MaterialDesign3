@@ -49,7 +49,7 @@ MDSliderBase::MDSliderBase(e3::Element* pParent)
         mInfoText = e3::ViewFactory::CreateText();
         mInfoShape->AddElement(mInfoText);
         mInfoText->SetFontSize("14dp");
-        mInfoText->SetTextColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
+        mInfoText->SetTextColor(MDTheme::Get()->OnPrimary);
         mInfoText->SetMarginLeft("8dp");
         mInfoText->SetMarginRight("8dp");
         mInfoText->SetMarginTop("4dp");

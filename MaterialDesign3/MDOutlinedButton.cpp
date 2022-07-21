@@ -3,8 +3,8 @@
 MDOutlinedButton::MDOutlinedButton(e3::Element *pParent)
 		: MDOutlinedButtonBase(pParent)
 {
-	mLabel->SetTextColor(*MDTheme::Get()->PrimaryColor);
-	SetBorderColor(MDTheme::Get()->PrimaryColor);
+    mLabel->SetTextColor(MDTheme::Get()->PrimaryColor);
+	SetBorderColor(MDTheme::Get()->OnSurface);
 }
 
 void MDOutlinedButton::SetLabel(const std::string &label, bool translate)

@@ -1,7 +1,7 @@
 #include "MainBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 MainBase::MainBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -10,6 +10,9 @@ MainBase::MainBase(e3::Element* pParent)
         this->SetOrientation((e3::EOrientation)1);
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
+        mDarkModeSwitch = new MDSwitch();
+        AddElement(mDarkModeSwitch);
+        mDarkModeSwitch->SetMarginTop("20dp");
                 MDRow* pCustomView1 = new MDRow();
         AddElement(pCustomView1);
         mAppBarPage = new MainMenuItem();

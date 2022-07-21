@@ -10,8 +10,8 @@ void MDFloatingActionButton::SetIcon(e3::Element *pIcon)
 {
 	//pIcon->SetMarginLeft(0);
 	//pIcon->SetMarginRight(8);
-	pIcon->SetWidth("24dp");
-	pIcon->SetHeight("24dp");
+	pIcon->SetWidth("18dp");
+	pIcon->SetHeight("18dp");
 	((MDIcon *)pIcon)->SetColor(MDTheme::Get()->OnPrimaryContainer);
 	AddElement(pIcon);
 }

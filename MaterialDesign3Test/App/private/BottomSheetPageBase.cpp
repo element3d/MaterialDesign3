@@ -1,29 +1,30 @@
 #include "BottomSheetPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 BottomSheetPageBase::BottomSheetPageBase(e3::Element* pParent)
-	: e3::Element(pParent)
+	: MDElement(pParent)
 {
         this->SetOrientation((e3::EOrientation)1);
+        this->SetOverflow((e3::EOverflow)2);
+        this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetBackgroundColor(glm::vec4(200, 200, 200, 255));
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
+        this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
         pElement1->SetWidth("100%");
         pElement1->SetHeight(e3::Dim("0", "0", "0", "40", "40", "40"));
         pElement1->SetAlignItemsHor((e3::EAlignment)0);
-        mBack = new MDIconButton();
+        mBack = new BackIcon();
         pElement1->AddElement(mBack);
-        mBack->SetName(_s(arrow_back));
                 MDScaffold* pCustomView1 = new MDScaffold();
         AddElement(pCustomView1);
         pCustomView1->SetMarginTop(e3::Dim("0", "0", "0", "50", "50", "50"));
         pCustomView1->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
         pCustomView1->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
         pCustomView1->SetOrientation((e3::EOrientation)1);
-        pCustomView1->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
                 MDAppBar* pCustomView2 = new MDAppBar();
         pCustomView1->AddElement(pCustomView2);
         pCustomView2->SetAlignItemsHor((e3::EAlignment)3);
@@ -54,6 +55,7 @@ BottomSheetPageBase::BottomSheetPageBase(e3::Element* pParent)
         pElement4->AddElement(pText1);
         pText1->SetText("Header");
         pText1->SetFontSize("18dp");
+        pText1->SetTextColor(MDTheme::Get()->OnSurfaceVariant);
         mList = new MDListView();
         pElement3->AddElement(mList);
 

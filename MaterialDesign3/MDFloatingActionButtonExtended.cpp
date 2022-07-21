@@ -10,7 +10,7 @@ void MDFloatingActionButtonExtended::SetIcon(e3::Element *pIcon)
 {
 	pIcon->SetMarginLeft(0);
 	pIcon->SetMarginRight(0);
-	pIcon->SetWidth("24dp");
+	pIcon->SetWidth("18dp");
 	pIcon->SetAspectRatio(1);
 	((MDIcon *)pIcon)->SetColor(MDTheme::Get()->OnPrimaryContainer);
 	mIconCont->AddElement(pIcon);
@@ -19,7 +19,7 @@ void MDFloatingActionButtonExtended::SetIcon(e3::Element *pIcon)
 void MDFloatingActionButtonExtended::SetIcon(const std::string &iconName)
 {
 	MDIcon *pIcon = new MDIcon();
-	pIcon->SetWidth("24dp");
+	pIcon->SetWidth("18dp");
 	pIcon->SetAspectRatio(1);
 	pIcon->SetMarginLeft(0);
 	pIcon->SetMarginRight(0);
@@ -38,7 +38,7 @@ void MDFloatingActionButtonExtended::SetLabel(const std::string &label, bool tra
 	if (!mLabelCont->GetNumChildren())
 	{
 		MDText *pLabel = new MDText();
-		pLabel->SetFontSize("18dp");
+		pLabel->SetFontSize("16dp");
 		pLabel->SetTextColor(glm::vec4(255));
 		pLabel->SetFontStyle(e3::EFontStyle::Bold);
 		pLabel->SetText(label, translate);

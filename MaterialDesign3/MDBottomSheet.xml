@@ -7,11 +7,21 @@
   alignItemsVer="End"
   overflow="Hidden">
 
-  <!-- <MDElement
-    width="100dp"
-    height="10dp"
-    backgroundColor="glm::vec4(0, 0, 0, 255)"
-    borderRadius="all: 0.5">
-  </MDElement> -->
+  <Element
+    element="mSheet"
+    width="100%"
+    height="100%"
+    backgroundColor="MDTheme::Get()->SurfaceVariant"
+    borderRadius='glm::vec4(e3::Dim("30dp"), e3::Dim("30dp"), 0, 0)'
+    alignItemsVer="Start"
+    orientation="Vertical"
+    alignItemsHor="Center">
+    <Element
+        width="30dp"
+        height="4dp"
+        margin="16dp"
+      backgroundColor="MDTheme::Get()->OnSurfaceVariant">
+    </Element>
+  </Element>
 
 </MDElement>

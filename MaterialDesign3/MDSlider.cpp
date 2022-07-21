@@ -53,13 +53,13 @@ void MDSlider::SetOnChangeCallback(OnChangeCallback c)
 
 void MDSlider::Render()
 {
-	mCircle->SetBackgroundColor(*MDTheme::Get()->PrimaryColor);
-	glm::vec4 primary = *MDTheme::Get()->PrimaryColor;
+    mCircle->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+    glm::vec4 primary = MDTheme::Get()->PrimaryColor;
 	mBackground->SetBackgroundColor(glm::vec4(primary.r, primary.g, primary.b, 50));
-	glm::vec4 hoverColor = *MDTheme::Get()->PrimaryColor;
+    glm::vec4 hoverColor = MDTheme::Get()->PrimaryColor;
 	hoverColor.w = 30;
 	mHoverCircle->SetBackgroundColor(hoverColor);
-	mValue->SetBackgroundColor(*MDTheme::Get()->PrimaryColor);
+    mValue->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
 
 	MDSliderBase::Render();
 }
@@ -75,7 +75,7 @@ void MDSlider::SetDivisions(int divisiions)
 		pD->SetHeight("3dp");
 		pD->SetAspectRatio(1);
 		pD->SetShapeType(e3::EShapeType::Circle);
-		pD->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDColors::Primary::Get());
+        pD->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDTheme::Get()->PrimaryColor);
 		mDivisions->AddElement(pD);
 	}
 }
@@ -115,7 +115,7 @@ void MDSlider::OnMouseMove(e3::MouseEvent *pEvent)
 		for (int j = 0; j < i; ++j)
 			mDivisions->GetChildren()[j]->SetBackgroundColor(glm::vec4(255));
 		for (int j = i; j < mDivisions->GetNumChildren(); ++j)
-			mDivisions->GetChildren()[j]->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDColors::Primary::Get());
+            mDivisions->GetChildren()[j]->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDTheme::Get()->PrimaryColor);
 	}
 	else
 	{

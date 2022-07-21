@@ -4,6 +4,7 @@
 
 #include "private/MDDrawerBase.h"
 
+class MDScaffold;
 class E3_EXPORT MDDrawer : public MDDrawerBase
 {
 public:
@@ -12,6 +13,7 @@ public:
 	void Show();
 	void ShowModal();
 	void Hide();
+	void SetScaffold(MDScaffold* pScaffold);
 
 	bool IsShown();
 
@@ -23,9 +25,11 @@ private:
 	void Show(bool showModal);
 
 private:
-	bool mIsShown = false;;
+	bool mIsShown = false;
+	bool mSliding = false;
 	MDElement* mContent = nullptr;
 	e3::Animation* mAnimation = nullptr;
+	MDScaffold* mScaffold = nullptr;
 };
 
 #endif // MDDrawer_H_

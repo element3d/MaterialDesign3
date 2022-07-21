@@ -34,6 +34,7 @@ public:
 protected:
 	MDMenuBody* mMenuBody = nullptr;
 MDIconButton* mBack = nullptr;
+MDScaffold* mScaffold = nullptr;
 
 
 };

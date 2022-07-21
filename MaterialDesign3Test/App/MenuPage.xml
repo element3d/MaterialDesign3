@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m: 0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <var
@@ -44,6 +44,7 @@
     <MDMenu
       body="mContextMenuBody">
       <MDIconButton
+        color="MDTheme::Get()->OnSurface"
         name="_s(more_vert)">
       </MDIconButton>
     </MDMenu>
@@ -59,12 +60,11 @@
     </MDIconButton>
   </Element>
 
-  <Element
+  <MDScaffold
     marginTop="m: 0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -81,7 +81,7 @@
         text="Context menu"
         fontSize="18dp"
         fontStyle="Bold"
-        textColor='MDColors::Grey::Get("800")'>
+        textColor='MDTheme::Get()->OnSurface'>
       </Text>
       <MDListTile
         marginTop="10dp"
@@ -94,20 +94,19 @@
         text="Simple menu"
         fontSize="18dp"
         fontStyle="Bold"
-        textColor='MDColors::Grey::Get("800")'>
+        textColor='MDTheme::Get()->OnSurface'>
       </Text>
       <MDMenu
         marginTop="10dp"
         body="mMenuBody1">
-        <MDInkWell
-          backgroundColor="all: 255">
+        <MDInkWell>
           <MDListTile
             title="_s(An item with a simple menu)">
           </MDListTile>
         </MDInkWell>
       </MDMenu>
     </Element>
-  </Element>
+  </MDScaffold>
 
  
 </MDElement>

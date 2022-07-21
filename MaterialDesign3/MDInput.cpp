@@ -12,7 +12,7 @@ MDInput::MDInput(e3::Element* pParent)
 	mLabelText->SetTranslation(glm::vec3(0, e3::Dim("10dp"), 0));
 	mPrefixText->SetTextColor(glm::vec4(0));
 	mHintText->SetVisibility(e3::EVisibility::Hidden);
-	mContainer->SetBackgroundColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.03 * 255));
+    mContainer->SetBackgroundColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.03 * 255));
 	mInput->SetOnChangeCallback([this](const std::string& text) {
 		if (text.size()) mHintText->SetVisibility(e3::EVisibility::Hidden);
 		else mHintText->SetVisibility(e3::EVisibility::Visible);
@@ -23,14 +23,14 @@ void MDInput::OnMouseEnter(e3::MouseEvent* pEvent)
 {
 	MDInputBase::OnMouseEnter(pEvent);
 	if (!mFocused)
-		mContainer->SetBackgroundColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.06 * 255));
+        mContainer->SetBackgroundColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.06 * 255));
 }
 
 void MDInput::OnMouseLeave(e3::MouseEvent* pEvent)
 {
 	MDInputBase::OnMouseLeave(pEvent);
 
-	mContainer->SetBackgroundColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.03 * 255));
+    mContainer->SetBackgroundColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.03 * 255));
 }
 
 void MDInput::SetLabelText(const std::string& labelText, bool translate)
@@ -123,17 +123,17 @@ bool MDInput::OnMouseUp(e3::MouseEvent* pEvent)
 
 void MDInput::Render()
 {
-	mInput->SetTextColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.87 * 255));
+    mInput->SetTextColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.87 * 255));
 	if (mFocused)
 	{
 		mUnderline->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
-		mLabelText->SetTextColor(*MDTheme::Get()->PrimaryColor);
+        mLabelText->SetTextColor(MDTheme::Get()->PrimaryColor);
 	}
 	else 
 	{
-		mUnderline->SetBackgroundColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.6 * 255));
-		mLabelText->SetTextColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.6 * 255));
+        mUnderline->SetBackgroundColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.6 * 255));
+        mLabelText->SetTextColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.6 * 255));
 	}
-	mInput->SetHintColor(glm::vec4(glm::vec3(*MDTheme::Get()->OnSurface), 0.6 * 255));
+    mInput->SetHintColor(glm::vec4(glm::vec3(MDTheme::Get()->OnSurface), 0.6 * 255));
 	return MDInputBase::Render();
 }

@@ -19,7 +19,6 @@ public:
 	virtual void AddElement(e3::Element* pElement) override;
 public:
 	virtual bool OnClick(e3::MouseEvent* pEvent) override;
-
 private:
 	void Show(bool showModal);
 

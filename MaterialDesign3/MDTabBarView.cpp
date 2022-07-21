@@ -34,7 +34,7 @@ void MDTabBarView::SetIndex(int index)
 	mTmpPage->SetVisibility(e3::EVisibility::Visible);
 
 	mAnimation = new e3::Animation();
-	mAnimation->Start(0.3, [this, currGeo, index, oldIndex](float v) {
+	mAnimation->Start(0.1, [this, currGeo, index, oldIndex](float v) {
 		if (index > oldIndex)
 		{
 			mCurrentPage->SetTranslation(glm::vec3(v * (-currGeo.width), 0, 0));

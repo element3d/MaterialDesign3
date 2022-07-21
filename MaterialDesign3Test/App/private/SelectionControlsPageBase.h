@@ -5,6 +5,7 @@
 #include <e3/ViewFactory.h>
 #include <MDRadioGroup.h>
 #include <MDIconButton.h>
+#include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
 #include <MDCheckbox.h>

@@ -1,24 +1,23 @@
-<Element
+<MDElement
   orientation="Vertical"
+  overflow="Scroll"
+  alignItemsHor="Center"
   alignItemsVer="Start"
-  backgroundColor="glm::vec4(200, 200, 200, 255)">
+  paddingBottom="m: 0, d: 50"
+  backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
     width="100%"
     height="m: 0, d: 40"
     alignItemsHor="Start">
-    <MDIconButton
-      element="mBack"
-      name="_s(arrow_back)">
-    </MDIconButton>
+    <BackIcon element="mBack"></BackIcon>
   </Element>
 
   <MDScaffold
     marginTop="m: 0, d:50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="SpaceBetween">
       <MDAppBarTitle
@@ -47,7 +46,8 @@
           height="70dp">
           <Text
             text="Header"
-            fontSize="18dp">
+            fontSize="18dp"
+            textColor="MDTheme::Get()->OnSurfaceVariant">
           </Text>
         </Element>
         <MDListView
@@ -57,4 +57,4 @@
     </MDBottomSheet>
   </MDScaffold>
 
-</Element>
+</MDElement>

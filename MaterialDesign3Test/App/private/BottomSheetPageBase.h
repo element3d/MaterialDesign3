@@ -3,16 +3,17 @@
 #define __BottomSheetPageBase_H__
 
 #include <e3/ViewFactory.h>
-#include <MDIconButton.h>
+#include <BackIcon.h>
 #include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
 #include <MDButton.h>
 #include <MDBottomSheet.h>
 #include <MDListView.h>
+#include "MDElement.h"
 
 
-class BottomSheetPageBase : public e3::Element
+class BottomSheetPageBase : public MDElement
 {
 public:
     struct __Id
@@ -29,7 +30,7 @@ public:
 
  
 protected:
-	MDIconButton* mBack = nullptr;
+	BackIcon* mBack = nullptr;
 MDButton* mShowButton = nullptr;
 MDBottomSheet* mBottomSheet = nullptr;
 MDListView* mList = nullptr;

@@ -51,7 +51,7 @@
       <Text
         element="mInfoText"
         fontSize="14dp"
-        textColor="all: 255"
+        textColor="MDTheme::Get()->OnPrimary"
         marginLeft="8dp"
         marginRight="8dp"
         marginTop="4dp"

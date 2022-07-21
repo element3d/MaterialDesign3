@@ -14,6 +14,20 @@
 Main::Main(e3::Element *pParent)
     : MainBase(pParent)
 {
+    MDTheme::OnChangeCallback* pCall = new MDTheme::OnChangeCallback([this](){
+         SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
+    });
+
+    MDTheme::AddOnChangeCallback(pCall);
+
+    mDarkModeSwitch->SetOnChangeCallback([](bool checked) {
+        if (checked)
+            MDTheme::SetDark();
+        else
+            MDTheme::SetDefault();
+
+    });
+
     mAppBarPage->SetOnClickCallback([this](e3::MouseEvent *) {
         AppBarPage *pAppBarPage = new AppBarPage();
         GetApplication()->PushElement(pAppBarPage, false, new MDPushTransitionAnimation(pAppBarPage));

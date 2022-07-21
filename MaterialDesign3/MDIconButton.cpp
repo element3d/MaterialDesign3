@@ -20,14 +20,8 @@ void MDIconButton::SetName(const std::string& name)
 
 void MDIconButton::SetColor(const glm::vec4& color)
 {
-	// mIcon->SetColor(color);
-	// mHasOwnColor = true;
-}
-
-void MDIconButton::SetColor(MDColor* pColor)
-{
-	mIcon->SetColor(pColor);
-	mIconColor = pColor;
+    mIcon->SetColor(color);
+    //mHasOwnColor = true;
 }
 
 void MDIconButton::OnMouseEnter(e3::MouseEvent* pEvent)

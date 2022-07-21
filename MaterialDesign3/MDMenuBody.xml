@@ -1,15 +1,15 @@
 <DropdownBody
-  minWidth="112dp"
-  paddingTop="m: (10, 10, 20), d: (10, 10, 10)"
-  paddingBottom="m: (10, 10, 20), d: (10, 10, 10)"
-  backgroundColor="all: 255"
+  minWidth="180dp"
+  paddingTop="10dp"
+  paddingBottom="10dp"
+  backgroundColor="MDTheme::Get()->SurfaceVariant"
   borderRadius='e3::Dim("4dp")'
   orientation="Vertical"
   alignItemsVer="Start"
   overflow="Hidden">
-
+  <include path="MDTheme.h" />
   <Shadow
-    color="all: 180"
+    color="all: 100"
     offset="x: 0, y: 4"
     blurSize='e3::Dim("4dp")'>
   </Shadow>

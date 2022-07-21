@@ -11,7 +11,7 @@ class E3_EXPORT MDSwitch : public MDSwitchBase
 public:
 	MDSwitch(e3::Element* pParent = nullptr);
 
-	void SetValueColor(MDColor* pColor);
+    void SetValueColor(const glm::vec4& color);
 	void Check();
 	void Uncheck();
 	virtual void Render() override
@@ -28,7 +28,7 @@ public:
 
 private:
 	bool mChecked = false;
-	MDColor* mValueColor = nullptr;
+    glm::vec4 mValueColor;
 	e3::Animation* mAnimation = nullptr;
 	OnChangeCallback mOnChangeCallback;
 };

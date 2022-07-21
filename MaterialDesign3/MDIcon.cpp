@@ -22,11 +22,11 @@ MDIcon::MDIcon(const std::string& name, int size, const glm::vec4& color)
 	SetHeight(size);
 }
 
-void MDIcon::SetColor(MDColor* pColor)
+/*void MDIcon::SetColor(MDColor* pColor)
 {
 	mColor = pColor;
 	MDIconBase::SetColor(*pColor);
-}
+}*/
 
 void MDIcon::SetColor(const glm::vec4& color)
 {
@@ -93,6 +93,6 @@ std::string MDIcon::GetName()
 
 void MDIcon::Render()
 {
-	if (mColor)	MDIconBase::SetColor(*mColor);
+    // if (mColor)	MDIconBase::SetColor(*mColor);
 	MDIconBase::Render();
 }

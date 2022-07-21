@@ -1,5 +1,7 @@
 #include "MDListTile.h"
 #include "MDColors.h"
+#include "MDTheme.h"
+#include "MDText.h"
 
 MDListTile::MDListTile(e3::Element* pParent)
 	: MDListTileBase(pParent)
@@ -14,14 +16,23 @@ void MDListTile::SetLeading(e3::Element* pElement)
 	mLeading->SetHeight("24dp");*/
 	mTitleBody->SetMarginLeft(0);
 }
+void MDListTile::SetLeading(const std::string& iconName)
+{
+	MDIcon* pIcon = new MDIcon();
+	pIcon->SetWidth("18dp");
+	pIcon->SetAspectRatio(1);
+	pIcon->SetName(iconName);
+	mLeading->AddElement(pIcon);
+	mTitleBody->SetMarginLeft(0);
+}
 
 void MDListTile::SetTitle(const std::string& title, bool translate)
 {
 	if (!mTitleBody->GetNumChildren())
 	{
-		/*MD*/e3::Text* pTitle = new /*MD*/e3::Text();
-		//pTitle->SetTextColor(GetTheme()->TextTheme.Subtitle1.Color);
-		pTitle->SetFontSize(e3::Dim(16, 16, 48, 16, 16, 16));
+		/*MD*/MDText* pTitle = new /*MD*/MDText();
+        pTitle->SetTextColor(MDTheme::Get()->OnSurface);
+		pTitle->SetFontSize(e3::Dim("16dp"));
 		pTitle->SetText(title, translate);
 		mTitleBody->AddElement(pTitle);
 		return;

@@ -6,7 +6,6 @@
 MDMenuItemBase::MDMenuItemBase(e3::Element* pParent)
 	: MDInkWell(pParent)
 {
-        this->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
         this->SetOverflow((e3::EOverflow)0);
         this->SetWidth("100%");
         this->SetHeight(e3::Dim("50", "50", "120", "50", "50", "50"));

@@ -1,7 +1,7 @@
 #include "SlidersPageBase.h"
 
 #include <e3/ViewFactory.h>
-#include "MaterialDesign3TestValues.h"
+#include "./MaterialDesign3TestValues.h"
 
 SlidersPageBase::SlidersPageBase(e3::Element* pParent)
 	: MDElement(pParent)
@@ -10,7 +10,7 @@ SlidersPageBase::SlidersPageBase(e3::Element* pParent)
         this->SetOverflow((e3::EOverflow)2);
         this->SetAlignItemsHor((e3::EAlignment)2);
         this->SetAlignItemsVer((e3::EAlignment)0);
-        this->SetPaddingBottom("50dp");
+        this->SetPaddingBottom(e3::Dim("0", "0", "0", "50", "50", "50"));
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
     e3::Element* pElement1 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement1);
@@ -20,33 +20,32 @@ SlidersPageBase::SlidersPageBase(e3::Element* pParent)
         mBack = new MDIconButton();
         pElement1->AddElement(mBack);
         mBack->SetName(_s(arrow_back));
-    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    AddElement(pElement2);
-        pElement2->SetMarginTop(e3::Dim("0", "0", "0", "20", "20", "20"));
-        pElement2->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
-        pElement2->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
-        pElement2->SetOrientation((e3::EOrientation)1);
-        pElement2->SetBackgroundColor(glm::vec4(255.000000, 255.000000, 255.000000, 255.000000));
-                MDAppBar* pCustomView1 = new MDAppBar();
-        pElement2->AddElement(pCustomView1);
-        pCustomView1->SetAlignItemsHor((e3::EAlignment)0);
-                MDAppBarTitle* pCustomView2 = new MDAppBarTitle();
+                MDScaffold* pCustomView1 = new MDScaffold();
+        AddElement(pCustomView1);
+        pCustomView1->SetMarginTop(e3::Dim("0", "0", "0", "20", "20", "20"));
+        pCustomView1->SetWidth(e3::Dim("100%", "100%", "100%", "500", "500", "500"));
+        pCustomView1->SetHeight(e3::Dim("100%", "100%", "100%", "700", "700", "700"));
+        pCustomView1->SetOrientation((e3::EOrientation)1);
+                MDAppBar* pCustomView2 = new MDAppBar();
         pCustomView1->AddElement(pCustomView2);
-        pCustomView2->SetText("Sliders");
-    e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
-    pElement2->AddElement(pElement3);
-        pElement3->SetWidth("100%");
-        pElement3->SetHeight("100%");
-        pElement3->SetOrientation((e3::EOrientation)1);
-        pElement3->SetScaling((e3::EScaling)1);
+        pCustomView2->SetAlignItemsHor((e3::EAlignment)0);
+                MDAppBarTitle* pCustomView3 = new MDAppBarTitle();
+        pCustomView2->AddElement(pCustomView3);
+        pCustomView3->SetText("Sliders");
+    e3::Element* pElement2 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
+    pCustomView1->AddElement(pElement2);
+        pElement2->SetWidth("100%");
+        pElement2->SetHeight("100%");
+        pElement2->SetOrientation((e3::EOrientation)1);
+        pElement2->SetScaling((e3::EScaling)1);
         mInput = new MDInput();
-        pElement3->AddElement(mInput);
+        pElement2->AddElement(mInput);
         mInput->SetWidth(e3::Dim("300", "300", "300", "100", "100", "100"));
         mSlider = new MDSlider();
-        pElement3->AddElement(mSlider);
+        pElement2->AddElement(mSlider);
         mSlider->SetMarginTop(e3::Dim("90", "90", "90", "30", "30", "30"));
         mDivSlider = new MDSlider();
-        pElement3->AddElement(mDivSlider);
+        pElement2->AddElement(mDivSlider);
         mDivSlider->SetDivisions(5);
         mDivSlider->SetMarginTop(e3::Dim("90", "90", "90", "30", "30", "30"));
 

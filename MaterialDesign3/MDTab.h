@@ -14,6 +14,8 @@ public:
 	void SetTextLabel(const std::string& textLabel);
 	void SetLeadingIcon(const std::string& leadingIcon);
 
+	MDText* GetLabelElement();
+
 	virtual void OnMouseEnter(e3::MouseEvent* pEvent) override;
 	virtual void OnMouseLeave(e3::MouseEvent* pEvent) override;
 

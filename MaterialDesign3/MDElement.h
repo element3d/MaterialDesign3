@@ -10,7 +10,7 @@ class E3_EXPORT MDElement : public MDElementBase
 public:
 	MDElement(e3::Element* pParent = nullptr);
 
-	void SetBackgroundColor(MDColor* pColor);
+//	void SetBackgroundColor(MDColor* pColor);
 	void SetBorderColor(MDColor* pColor);
 
 	void SetBackgroundColor(const glm::vec4& color);
@@ -18,8 +18,9 @@ public:
 
 	virtual void Render() override;
 private:
-	MDColor* mBackgroundColor = nullptr;
+//	MDColor* mBackgroundColor = nullptr;
 	MDColor* mBorderColor = nullptr;
+    const glm::vec4* mBackgroundColor = nullptr;
 };
 
 #endif // MDElement_H_

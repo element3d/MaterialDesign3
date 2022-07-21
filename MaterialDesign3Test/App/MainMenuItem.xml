@@ -1,7 +1,7 @@
 <MDInkWell
-  width="m: 450, d: 150"
-  height="m: 450, d: 150"
-  margin="m: 30, d: 10"
+  width="150dp"
+  aspectRatio="1"
+  margin="10dp"
   orientation="Vertical"
   borderRadius='e3::Dim("20dp")'
  
@@ -9,15 +9,15 @@
   <MDIcon
     element="mIcon"
     name="_s(web_asset)"
-    width="m: 108, d: 36"
-    height="m: 108, d: 36"
+    width="36dp"
+    aspectRatio="1"
     color="MDTheme::Get()->PrimaryColor">
   </MDIcon>
   <MDText
     element="mTitle"
     text="App bar"
     textColor="MDTheme::Get()->PrimaryColor"
-    fontSize="m: 48, d:14"
+    fontSize="14dp"
     fontStyle="Bold">
   </MDText>
 </MDInkWell>

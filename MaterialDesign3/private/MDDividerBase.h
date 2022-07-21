@@ -3,7 +3,7 @@
 #define __MDDividerBase_H__
 
 #include <e3/ViewFactory.h>
-#include "MDColors.h"
+#include "MDTheme.h"
 #include "MDElement.h"
 
 

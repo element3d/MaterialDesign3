@@ -8,6 +8,7 @@
 #include <MDListTile.h>
 #include <MDMenu.h>
 #include <MDIconButton.h>
+#include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
 #include <MDInkWell.h>

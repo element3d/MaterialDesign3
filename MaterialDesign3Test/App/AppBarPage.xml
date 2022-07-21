@@ -32,17 +32,17 @@
   </Element>
 
   <MDScaffold
+    element="mScaffold"
     marginTop="m: 0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
     orientation="Vertical"
-    backgroundColor="all: 255">
+    backgroundColor="MDTheme::Get()->Background">
     <MDAppBar
       alignItemsHor="SpaceBetween">
       <Element>
         <MDAppBarAction
-          name="_s(menu)"
-          color="glm::vec4(255)">
+          name="_s(menu)">
         </MDAppBarAction>
         <MDAppBarTitle
           text="App bar">
@@ -50,12 +50,10 @@
       </Element>
       <Element>
         <MDAppBarAction
-          name="_s(menu)"
-          color="glm::vec4(255)">
+          name="_s(menu)">
         </MDAppBarAction>
         <MDAppBarAction
-          name="_s(menu)"
-          color="glm::vec4(255)">
+          name="_s(menu)">
         </MDAppBarAction>
         <MDMenu
           body="mMenuBody">

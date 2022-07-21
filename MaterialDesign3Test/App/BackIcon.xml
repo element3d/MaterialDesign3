@@ -1,0 +1,5 @@
+<MDIconButton
+    name="_s(arrow_back)"
+    color="MDTheme::Get()->OnSurfaceVariant">
+    <include path="MDTheme.h" />
+</MDIconButton>

@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m :0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
 
@@ -13,6 +13,7 @@
     alignItemsHor="Start">
     <MDIconButton
       element="mBack"
+      color="MDTheme::Get()->OnSurface"
       name="_s(arrow_back)">
     </MDIconButton>
   </Element>
@@ -20,6 +21,7 @@
 
 
   <MDScaffold
+    element="mScaffold"
     marginTop="m: 0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
@@ -29,8 +31,7 @@
       alignItemsHor="Start">
       <MDAppBarAction
         element="mDrawerButton"
-        name="_s(menu)"
-        color="glm::vec4(255)">
+        name="_s(menu)">
       </MDAppBarAction>
       <MDAppBarTitle
         text="Drawer">
@@ -45,7 +46,9 @@
      
     </Element>
     <MDDrawer
-      element="mDrawer">
+      element="mDrawer"
+      scaffold="mScaffold"
+      >
       <MDElement
         width="m: 80%, d: 60%"
         height="100%"
@@ -55,19 +58,39 @@
 
         <Element
           width="100%"
-          height="30%">
+          height="30%"
+          backgroundColor="MDTheme::Get()->PrimaryColor">
 
         </Element>
-        <MDListTile
-          element="mItem1"
-          leading='new MDIcon("favorite", 24 , MDColors::Grey::Get())'
-          title="_s(Item One)">
-        </MDListTile>
-        <MDListTile
-          element="mItem2"
-          leading='new MDIcon("comment", 24, MDColors::Grey::Get())'
-          title="_s(Item Two)">
-        </MDListTile>
+        <Element
+          orientation="Vertical"
+          width="100%"
+          padding="24dp">
+          <MDListTile
+            element="mItem1"
+            leading='"search"'
+            title="_s(Search)">
+          </MDListTile>
+          <MDListTile
+            element="mItem2"
+            leading='"3d_rotation"'
+            title="_s(3D)">
+          </MDListTile>
+          <MDListTile
+            leading='"double_arrow"'
+            title="_s(Accelerator)">
+          </MDListTile>
+          <MDListTile
+            leading='"dashboard"'
+            title="_s(Dashboard)">
+          </MDListTile>
+          <MDDivider>
+          </MDDivider>
+          <MDListTile
+            leading='"logout"'
+            title="_s(Logout)">
+          </MDListTile>
+        </Element>
 
       </MDElement>
     </MDDrawer>

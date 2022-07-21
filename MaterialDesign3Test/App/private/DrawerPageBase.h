@@ -11,6 +11,7 @@
 #include <MDDrawer.h>
 #include <MDElement.h>
 #include <MDListTile.h>
+#include <MDDivider.h>
 
 
 class DrawerPageBase : public MDElement
@@ -31,6 +32,7 @@ public:
  
 protected:
 	MDIconButton* mBack = nullptr;
+MDScaffold* mScaffold = nullptr;
 MDAppBarAction* mDrawerButton = nullptr;
 MDDrawer* mDrawer = nullptr;
 MDListTile* mItem1 = nullptr;

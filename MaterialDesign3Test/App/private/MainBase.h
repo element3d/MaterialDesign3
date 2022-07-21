@@ -3,6 +3,7 @@
 #define __MainBase_H__
 
 #include <e3/ViewFactory.h>
+#include <MDSwitch.h>
 #include <MDRow.h>
 #include <MainMenuItem.h>
 #include "MDElement.h"
@@ -25,7 +26,8 @@ public:
 
  
 protected:
-	MainMenuItem* mAppBarPage = nullptr;
+	MDSwitch* mDarkModeSwitch = nullptr;
+MainMenuItem* mAppBarPage = nullptr;
 MainMenuItem* mButtonPage = nullptr;
 MainMenuItem* mBottomNavBarPage = nullptr;
 MainMenuItem* mDrawerPage = nullptr;

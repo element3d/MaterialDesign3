@@ -3,7 +3,7 @@
   overflow="Scroll"
   alignItemsHor="Center"
   alignItemsVer="Start"
-  paddingBottom="50dp"
+  paddingBottom="m: 0, d: 50"
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
@@ -21,8 +21,7 @@
     marginTop="m:0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
-    orientation="Vertical"
-    backgroundColor="all: 255">
+    orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
       <MDAppBarTitle
@@ -37,9 +36,9 @@
 
       <MDText 
         text="MDIconButton"
-        fontSize="m: 54, d: 18"
+        fontSize="18dp"
         fontStyle="Bold"
-        textColor="MDTheme::Get()->OnBackground">
+        textColor="MDTheme::Get()->OnSurface">
       </MDText>
       <Element
         marginTop="10dp">
@@ -52,9 +51,9 @@
       <MDText
         marginTop="40dp"
         text="MDTextButton"
-        fontSize="m: 54, d: 18"
+        fontSize="18dp"
         fontStyle="Bold"
-        textColor="MDTheme::Get()->OnBackground">
+        textColor="MDTheme::Get()->OnSurface">
       </MDText>
       <Element
         marginTop="10dp">
@@ -72,19 +71,19 @@
       <MDText
         marginTop="40dp"
         text="MDButton"
-        fontSize="m: 54, d: 18"
+        fontSize="18dp"
         fontStyle="Bold"
-        textColor="MDTheme::Get()->OnBackground">
+        textColor="MDTheme::Get()->OnSurface">
       </MDText>
       <Element
         marginTop="10dp">
         <MDButton
-          label="_s(BUTTON)">
+          label="_s(Button)">
         </MDButton>
 
         <MDButton
           marginLeft="20dp"
-          label="_s(BUTTON)"
+          label="_s(Button)"
           icon='new MDIcon("add", 36, glm::vec4(255))'>
         </MDButton>
       </Element>
@@ -92,19 +91,19 @@
       <MDText
         marginTop="40dp"
         text="MDOutlinedButton"
-        fontSize="m: 54, d: 18"
+        fontSize="18dp"
         fontStyle="Bold"
-        textColor="MDTheme::Get()->OnBackground">
+        textColor="MDTheme::Get()->OnSurface">
       </MDText>
       <Element
         marginTop="10dp">
         <MDOutlinedButton
-          label="_s(BUTTON)">
+          label="_s(Button)">
         </MDOutlinedButton>
 
         <MDOutlinedButton
           marginLeft="20dp"
-          label="_s(BUTTON)"
+          label="_s(Button)"
           icon='new MDIcon("add", 18, MDColors::Primary::Get())'>
         </MDOutlinedButton>
       </Element>
@@ -112,9 +111,9 @@
       <MDText
         marginTop="40dp"
         text="MDFloatingActionButton"
-        fontSize="m: 54, d: 18"
+        fontSize="18dp"
         fontStyle="Bold"
-        textColor="MDTheme::Get()->OnBackground">
+        textColor="MDTheme::Get()->OnSurface">
       </MDText>
        <Element
         marginTop="10dp">
@@ -125,7 +124,7 @@
         <MDFloatingActionButtonExtended
           marginLeft="20dp"
           icon='new MDIcon("add", 32, glm::vec4(255))'
-          label="_s(BUTTON)">
+          label="_s(Extended FAB)">
         </MDFloatingActionButtonExtended>
       </Element>
     </Element>
