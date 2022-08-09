@@ -49,10 +49,10 @@
   </MDAppBar>
 
   <Element>
-    <MDButton
+    <MDFilledButton
       element="mDrawerButton"
       label="_s(BUTTON)">
-    </MDButton>
+    </MDFilledButton>
 
     <MDOutlinedButton
       marginLeft="20"
@@ -67,12 +67,12 @@
    <Element
     marginTop="10">
     <MDFloatingActionButton
-      icon='new MDIcon("add", 18, glm::vec4(255))'>
+      icon='_s(add)'>
     </MDFloatingActionButton>
 
     <MDFloatingActionButtonExtended
       marginLeft="20"
-      icon='new MDIcon("add", 18, glm::vec4(255))'
+      icon='_s(add)'
       label="_s(BUTTON)">
     </MDFloatingActionButtonExtended>
   </Element>

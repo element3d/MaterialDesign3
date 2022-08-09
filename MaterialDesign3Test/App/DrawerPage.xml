@@ -62,35 +62,35 @@
           backgroundColor="MDTheme::Get()->PrimaryColor">
 
         </Element>
-        <Element
-          orientation="Vertical"
-          width="100%"
-          padding="24dp">
-          <MDListTile
-            element="mItem1"
-            leading='"search"'
-            title="_s(Search)">
-          </MDListTile>
-          <MDListTile
+        <MDDrawerMenuBody>
+          <MDDrawerMenuItem
+              element="mItem1"
+              icon='"search"'
+              title="_s(Search)">
+          </MDDrawerMenuItem>
+          <MDDrawerMenuItem
             element="mItem2"
-            leading='"3d_rotation"'
+            icon='"3d_rotation"'
             title="_s(3D)">
-          </MDListTile>
-          <MDListTile
-            leading='"double_arrow"'
+          </MDDrawerMenuItem>
+          <MDDrawerMenuItem
+            icon='"double_arrow"'
             title="_s(Accelerator)">
-          </MDListTile>
-          <MDListTile
-            leading='"dashboard"'
+          </MDDrawerMenuItem>
+          <MDDrawerMenuItem
+            icon='"dashboard"'
             title="_s(Dashboard)">
-          </MDListTile>
+          </MDDrawerMenuItem>
           <MDDivider>
           </MDDivider>
-          <MDListTile
-            leading='"logout"'
+          <MDDrawerMenuLabel
+            text="Labels">
+          </MDDrawerMenuLabel>
+          <MDDrawerMenuItem
+            icon='"logout"'
             title="_s(Logout)">
-          </MDListTile>
-        </Element>
+          </MDDrawerMenuItem>
+        </MDDrawerMenuBody>
 
       </MDElement>
     </MDDrawer>

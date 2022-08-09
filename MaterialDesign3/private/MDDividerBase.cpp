@@ -8,6 +8,8 @@ MDDividerBase::MDDividerBase(e3::Element* pParent)
 {
         this->SetWidth("100%");
         this->SetHeight("1dp");
+        this->SetMarginTop("8dp");
+        this->SetMarginBottom("8dp");
         this->SetBackgroundColor(MDTheme::Get()->Outline);
 
 }

@@ -9,9 +9,12 @@
 #include <MDAppBarTitle.h>
 #include <MDText.h>
 #include <MDTextButton.h>
-#include <MDButton.h>
 #include <MDOutlinedButton.h>
-#include <MDFloatingActionButton.h>
+#include <MDElevatedButton.h>
+#include <MDFilledButton.h>
+#include <MDFAB.h>
+#include <MDLargeFAB.h>
+#include <MDSmallFAB.h>
 #include <MDFloatingActionButtonExtended.h>
 #include "MDElement.h"
 

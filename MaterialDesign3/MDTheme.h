@@ -75,6 +75,10 @@ public:
     glm::vec4 OnSurface;
     glm::vec4 SurfaceVariant;
     glm::vec4 OnSurfaceVariant;
+	glm::vec4 Tertiary;
+	glm::vec4 OnTertiary;
+	glm::vec4 TertiaryContainer;
+	glm::vec4 OnTertiaryContainer;
     glm::vec4 ScaffoldBackgroundColor;
     glm::vec4 Outline;
 //	MDAppBarTheme AppBarTheme;

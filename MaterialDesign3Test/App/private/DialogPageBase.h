@@ -7,7 +7,7 @@
 #include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
-#include <MDButton.h>
+#include <MDFilledButton.h>
 #include <MDDialog.h>
 #include <MDTextButton.h>
 #include "MDElement.h"
@@ -31,7 +31,7 @@ public:
  
 protected:
 	MDIconButton* mBack = nullptr;
-MDButton* mDialogButton = nullptr;
+MDFilledButton* mDialogButton = nullptr;
 MDDialog* mDialog = nullptr;
 
 

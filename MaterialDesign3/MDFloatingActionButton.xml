@@ -1,28 +1,18 @@
 <MDInkWell
   width="56dp"
+  aspectRatio="1"
   height="56dp"
   padding="16dp"
-  borderRadius='e3::Dim("16dp")'
+  borderRadius='glm::vec4(e3::Dim("16dp"))'
   overflow="Hidden">
 
-  <!-- <Element
-    element="mRipple"
-    positionType="Absolute"
-    shapeType="Circle"
-    aspectRatio="1">
-  </Element> -->
-
-  <!-- <MDIcon
+  <MDIcon
     element="mIcon"
+    width="24dp"
     margin="0"
     aspectRatio="1">
-  </MDIcon> -->
+  </MDIcon>
 
-  <!-- <Text
-    element="mLabel"
-    visibility="Hidden"
-    fontSize="m: (18, 22, 40), d: 16">
-  </Text> -->
   <Element
     element="mHover"
     height="100%"

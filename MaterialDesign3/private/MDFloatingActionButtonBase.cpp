@@ -7,9 +7,10 @@ MDFloatingActionButtonBase::MDFloatingActionButtonBase(e3::Element* pParent)
 	: MDInkWell(pParent)
 {
         this->SetWidth("56dp");
+        this->SetAspectRatio(1.000000);
         this->SetHeight("56dp");
         this->SetPadding("16dp");
-        this->SetBorderRadius(e3::Dim("16dp"));
+        this->SetBorderRadius(glm::vec4(e3::Dim("16dp")));
         this->SetOverflow((e3::EOverflow)0);
         e3::ShadowParams ShadowParams;
         ShadowParams.Color = glm::vec4(100, 100, 100, 250);
@@ -18,6 +19,11 @@ MDFloatingActionButtonBase::MDFloatingActionButtonBase(e3::Element* pParent)
         ShadowParams.Scale = 1.0;
         ShadowParams.Offset = glm::ivec2(0, 8);
         SetShadow(ShadowParams);
+        mIcon = new MDIcon();
+        AddElement(mIcon);
+        mIcon->SetWidth("24dp");
+        mIcon->SetMargin(0);
+        mIcon->SetAspectRatio(1.000000);
     mHover = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(mHover);
         mHover->SetHeight("100%");

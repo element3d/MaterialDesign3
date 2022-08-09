@@ -29,10 +29,10 @@
       height="100%"
       orientation="Vertical"
       scaling="Shrink">
-      <MDButton
+      <MDFilledButton
         element="mShowButton"
-        label="_s(SHOW BOTTOM SHEET)">
-      </MDButton>
+        label="_s(Show Bottom Sheet)">
+      </MDFilledButton>
     </Element>
     <MDBottomSheet
       element="mBottomSheet">

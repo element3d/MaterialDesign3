@@ -23,10 +23,10 @@ public:
 
  
 protected:
-	e3::Element* mBackground = nullptr;
+	e3::Element* mHoverCircle = nullptr;
+e3::Element* mBackground = nullptr;
 e3::Element* mValue = nullptr;
 e3::Element* mDivisions = nullptr;
-e3::Element* mHoverCircle = nullptr;
 e3::Element* mInfo = nullptr;
 MDElement* mInfoShape = nullptr;
 e3::Text* mInfoText = nullptr;

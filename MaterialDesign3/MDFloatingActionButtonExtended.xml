@@ -2,17 +2,27 @@
   height="56dp"
   padding="16dp"
   minWidth="80dp"
-  borderRadius='e3::Dim("16dp")'
+  borderRadius='glm::vec4(e3::Dim("16dp"))'
   overflow="Hidden"
-  backgroundColor="glm::vec4(96, 2, 238, 255)">
+  backgroundColor="MDTheme::Get()->PrimaryContainer">
+  <include path="MDTheme.h" />
 
-  <Element
-    element="mIconCont">
-  </Element>
+  <MDIcon
+    visibility="Hidden"
+    element="mIcon"
+    width="24dp"
+    margin="0"
+    marginRight="8dp"
+    aspectRatio="1"
+    color="MDTheme::Get()->OnPrimaryContainer">
+  </MDIcon>
 
-  <Element
-    element="mLabelCont">
-  </Element>
+  <MDText
+      element="mLabel"
+      fontStyle="Bold"
+      fontSize="18dp"
+      textColor="MDTheme::Get()->OnPrimaryContainer">
+  </MDText>
 
   <Element
     element="mHover"

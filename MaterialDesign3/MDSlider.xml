@@ -1,31 +1,6 @@
 <Element
-  width="m: (300, 300, 600), d: (300, 300, 300)"
-  height="m: (20, 30, 50), d: (20, 20, 20)">
-
-  <Element
-    element="mBackground"
-    width="100%"
-    height="6dp"
-    borderRadius="all: 0.5"
-    backgroundColor="glm::vec4(96, 2, 238, 255)">
-  </Element>
-
-  <Element
-    element="mValue"
-    positionType="Absolute"
-    left="0"
-    height="30%"
-    borderRadius="all: 0.5">
-  </Element>
-
-  <Element
-    element="mDivisions"
-    positionType="Absolute"
-    alignItemsHor="SpaceBetween"
-    left="0"
-    width="100%"
-    height="6dp">
-  </Element>
+  width="300dp"
+  height="20dp">
 
   <Element
     element="mHoverCircle"
@@ -38,12 +13,37 @@
   </Element>
 
   <Element
+    element="mBackground"
+    width="100%"
+    height="4dp"
+    borderRadius="all: 0.5">
+  </Element>
+
+  <Element
+    element="mValue"
+    positionType="Absolute"
+    left="0"
+    height="4dp"
+    borderRadius="all: 0.5">
+  </Element>
+
+  <Element
+    element="mDivisions"
+    positionType="Absolute"
+    alignItemsHor="SpaceBetween"
+    left="0"
+    width="100%"
+    height="6dp">
+  </Element>
+
+
+
+  <Element
     element="mInfo"
     positionType="Absolute"
     left="0"
     orientation="Vertical"
-    visibility="Gone"
-    marginBottom="4dp">
+    visibility="Gone">
     <MDElement
       element="mInfoShape"
       backgroundColor="MDTheme::Get()->PrimaryColor"
@@ -60,8 +60,8 @@
     </MDElement>
     <MDElement
       element="mInfoTriangle"
-      width="16dp"
-      height="8dp"
+      width="10dp"
+      height="5dp"
       borderType="Cut"
       borderRadius="glm::vec4(0, 0, 1, 1)"
       backgroundColor="MDTheme::Get()->PrimaryColor">

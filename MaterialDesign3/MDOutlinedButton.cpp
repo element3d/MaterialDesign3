@@ -3,25 +3,20 @@
 MDOutlinedButton::MDOutlinedButton(e3::Element *pParent)
 		: MDOutlinedButtonBase(pParent)
 {
-    mLabel->SetTextColor(MDTheme::Get()->PrimaryColor);
-	SetBorderColor(MDTheme::Get()->OnSurface);
+    //mLabel->SetTextColor(MDTheme::Get()->PrimaryColor);
+	//SetBorderColor(MDTheme::Get()->OnSurface);
 }
 
-void MDOutlinedButton::SetLabel(const std::string &label, bool translate)
+void MDOutlinedButton::SetIcon(const std::string& name)
 {
-	//mLabel->SetVisibility(e3::EVisibility::Visible);
+	mIcon->SetVisibility(e3::EVisibility::Visible);
+	mIcon->SetName(name);
+	SetPaddingLeft("16dp");
+}
+
+void MDOutlinedButton::SetLabel(const std::string& label, bool translate)
+{
 	mLabel->SetText(label, translate);
-}
-
-void MDOutlinedButton::SetIcon(MDIcon *pIcon)
-{
-	pIcon->SetMarginLeft("16dp");
-	pIcon->SetMarginRight(0);
-	pIcon->SetWidth("18dp");
-	pIcon->SetHeight("18dp");
-	pIcon->SetColor(MDTheme::Get()->PrimaryColor);
-	mLabel->SetMarginLeft("8dp");
-	mIconCont->AddElement(pIcon);
 }
 
 void MDOutlinedButton::OnMouseEnter(e3::MouseEvent *pEvent)

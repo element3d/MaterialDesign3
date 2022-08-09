@@ -1,0 +1,25 @@
+<MDInkWell
+    height="40dp"
+    borderRadius="all: 0.5"
+    overflow="Hidden"
+    paddingLeft="24dp"
+    paddingRight="24dp"
+    backgroundColor="MDTheme::Get()->PrimaryColor">
+    <include path="MDTheme.h" />
+   
+    <MDIcon
+        element="mIcon"
+        margin="0"
+        marginRight="8dp"
+        visibility="Hidden"
+        width="18dp"
+        color="MDTheme::Get()->OnPrimary"
+        aspectRatio="1">
+    </MDIcon>
+    <MDText
+        element="mLabel"
+        fontStyle="Bold"
+        fontSize="18dp"
+        textColor="MDTheme::Get()->OnPrimary">
+    </MDText>
+</MDInkWell>

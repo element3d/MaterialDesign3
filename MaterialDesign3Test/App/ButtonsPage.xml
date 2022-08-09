@@ -4,6 +4,7 @@
   alignItemsHor="Center"
   alignItemsVer="Start"
   paddingBottom="m: 0, d: 50"
+  
   backgroundColor="MDTheme::Get()->SurfaceVariant">
 
   <Element
@@ -21,6 +22,8 @@
     marginTop="m:0, d: 50"
     width="m: 100%, d: 500"
     height="m: 100%, d: 700"
+    paddingBottom="40dp"
+    overflow="Scroll"
     orientation="Vertical">
     <MDAppBar
       alignItemsHor="Start">
@@ -30,9 +33,7 @@
     </MDAppBar>
     <Element
       width="100%"
-      height="100%"
-      orientation="Vertical"
-      scaling="Shrink">
+      orientation="Vertical">
 
       <MDText 
         text="MDIconButton"
@@ -57,35 +58,14 @@
       </MDText>
       <Element
         marginTop="10dp">
-        <MDTextButton
-          label="_s(Button)">
+         <MDTextButton
+          label="_s(Button)"
+          icon='_s(check)'>
         </MDTextButton>
-
         <MDTextButton
           marginLeft="20dp"
-          label="_s(Button)"
-          icon='new MDIcon("add", 18, glm::vec4(255))'>
-        </MDTextButton>
-      </Element>
-
-      <MDText
-        marginTop="40dp"
-        text="MDButton"
-        fontSize="18dp"
-        fontStyle="Bold"
-        textColor="MDTheme::Get()->OnSurface">
-      </MDText>
-      <Element
-        marginTop="10dp">
-        <MDButton
           label="_s(Button)">
-        </MDButton>
-
-        <MDButton
-          marginLeft="20dp"
-          label="_s(Button)"
-          icon='new MDIcon("add", 36, glm::vec4(255))'>
-        </MDButton>
+        </MDTextButton>
       </Element>
 
       <MDText
@@ -97,15 +77,54 @@
       </MDText>
       <Element
         marginTop="10dp">
-        <MDOutlinedButton
-          label="_s(Button)">
-        </MDOutlinedButton>
 
+         <MDOutlinedButton
+          label="_s(Button)"
+          icon='_s(check)'>
+        </MDOutlinedButton>
         <MDOutlinedButton
           marginLeft="20dp"
-          label="_s(Button)"
-          icon='new MDIcon("add", 18, MDColors::Primary::Get())'>
+          label="_s(Button)">
         </MDOutlinedButton>
+       
+      </Element>
+
+      <MDText
+        marginTop="40dp"
+        text="MDElevatedButton"
+        fontSize="18dp"
+        fontStyle="Bold"
+        textColor="MDTheme::Get()->OnSurface">
+      </MDText>
+      <Element
+        marginTop="10dp">
+        <MDElevatedButton
+          icon="_s(check)"
+          label="_s(Button)">
+        </MDElevatedButton>
+        <MDElevatedButton
+          marginLeft="20dp"
+          label="_s(Button)">
+        </MDElevatedButton>
+      </Element>
+
+      <MDText
+        marginTop="40dp"
+        text="MDFilledButton"
+        fontSize="18dp"
+        fontStyle="Bold"
+        textColor="MDTheme::Get()->OnSurface">
+      </MDText>
+      <Element
+        marginTop="10dp">
+        <MDFilledButton
+          icon="_s(check)"
+          label="_s(Button)">
+        </MDFilledButton>
+        <MDFilledButton
+          marginLeft="20dp"
+          label="_s(Button)">
+        </MDFilledButton>
       </Element>
 
       <MDText
@@ -117,15 +136,50 @@
       </MDText>
        <Element
         marginTop="10dp">
-        <MDFloatingActionButton
-          icon='new MDIcon("add", 32, glm::vec4(255))'>
-        </MDFloatingActionButton>
+        <MDFAB
+          icon='_s(check)'
+          color="EMDFABColor::Surf">
+        </MDFAB>
 
-        <MDFloatingActionButtonExtended
+         <MDLargeFAB
+          marginLeft="20dp"
+          color="EMDFABColor::Tert"
+          icon='_s(check)'>
+        </MDLargeFAB>
+
+        <MDSmallFAB
+          marginLeft="20dp"
+          icon='_s(check)'>
+        </MDSmallFAB>
+
+        <!-- <MDFloatingActionButtonExtended
           marginLeft="20dp"
           icon='new MDIcon("add", 32, glm::vec4(255))'
           label="_s(Extended FAB)">
-        </MDFloatingActionButtonExtended>
+        </MDFloatingActionButtonExtended> -->
+      </Element>
+
+
+      <MDText
+        marginTop="40dp"
+        text="MDFloatingActionButtonExtended"
+        fontSize="18dp"
+        fontStyle="Bold"
+        textColor="MDTheme::Get()->OnSurface">
+      </MDText>
+       <Element
+        marginTop="10dp">
+        <MDFloatingActionButtonExtended
+          marginLeft="20dp"
+          icon='_s(check)'
+          color="EMDFABColor::Surf"
+          label="_s(Extended FAB)">
+        </MDFloatingActionButtonExtended> 
+        <MDFloatingActionButtonExtended
+          marginLeft="20dp"
+          color="EMDFABColor::Tert"
+          label="_s(Extended FAB)">
+        </MDFloatingActionButtonExtended> 
       </Element>
     </Element>
   </MDScaffold>

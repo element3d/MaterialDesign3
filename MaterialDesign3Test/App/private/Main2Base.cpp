@@ -32,7 +32,7 @@ Main2Base::Main2Base(e3::Element* pParent)
         pCustomView5->SetColor(glm::vec4(255));
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);
     AddElement(pElement3);
-        mDrawerButton = new MDButton();
+        mDrawerButton = new MDFilledButton();
         pElement3->AddElement(mDrawerButton);
         mDrawerButton->SetLabel(_s(BUTTON));
                 MDOutlinedButton* pCustomView6 = new MDOutlinedButton();
@@ -48,11 +48,11 @@ Main2Base::Main2Base(e3::Element* pParent)
         pElement4->SetMarginTop(10);
                 MDFloatingActionButton* pCustomView8 = new MDFloatingActionButton();
         pElement4->AddElement(pCustomView8);
-        pCustomView8->SetIcon(new MDIcon("add", 18, glm::vec4(255)));
+        pCustomView8->SetIcon(_s(add));
                 MDFloatingActionButtonExtended* pCustomView9 = new MDFloatingActionButtonExtended();
         pElement4->AddElement(pCustomView9);
         pCustomView9->SetMarginLeft(20);
-        pCustomView9->SetIcon(new MDIcon("add", 18, glm::vec4(255)));
+        pCustomView9->SetIcon(_s(add));
         pCustomView9->SetLabel(_s(BUTTON));
                 MDBottomNavigationBar* pCustomView10 = new MDBottomNavigationBar();
         AddElement(pCustomView10);

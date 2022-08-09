@@ -1,12 +1,12 @@
 <Element
   orientation="Horizontal"
   overflow="Hidden">
-  <Shadow
+  <!-- <Shadow
     color="all: 100"
     offset="x: 0, y: 10"
     blurSize="20"
     opacity="1">
-  </Shadow>
+  </Shadow> -->
  
   <Element
     orientation="Vertical"

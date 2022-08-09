@@ -1,17 +1,17 @@
 #include "MDSlider.h"
 #include "MDColors.h"
+#include "MDTheme.h"
 
 MDSlider::MDSlider(e3::Element *pParent)
 		: MDSliderBase(pParent)
 {
-	// MDColor primary = GetTheme()->ColorPrimary;
-	mCircle->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDColors::Primary::Get());
-	glm::vec4 primary = MDColors::Primary::Get();
-	mBackground->SetBackgroundColor(glm::vec4(primary.r, primary.g, primary.b, 50));
-	glm::vec4 hoverColor = /*GetTheme()->ColorPrimary*/ MDColors::Primary::Get();
+	mCircle->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+	glm::vec4 primary = MDTheme::Get()->PrimaryColor;
+	mBackground->SetBackgroundColor(MDTheme::Get()->SurfaceVariant/*::vec4(primary.r, primary.g, primary.b, 50)*/);
+	glm::vec4 hoverColor = MDTheme::Get()->PrimaryColor;
 	hoverColor.w = 30;
 	mHoverCircle->SetBackgroundColor(hoverColor);
-	mValue->SetBackgroundColor(/*GetTheme()->ColorPrimary*/ MDColors::Primary::Get());
+	mValue->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
 	//mInfo->SetVisibility(e3::EVisibility::Hidden);
 	//mInfo->SetBackgroundColor(MDColors::Grey::Get("700"));
 	//mInfoShape->SetBackgroundColor(MDColors::Grey::Get("700"));
@@ -53,13 +53,13 @@ void MDSlider::SetOnChangeCallback(OnChangeCallback c)
 
 void MDSlider::Render()
 {
-    mCircle->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
-    glm::vec4 primary = MDTheme::Get()->PrimaryColor;
-	mBackground->SetBackgroundColor(glm::vec4(primary.r, primary.g, primary.b, 50));
-    glm::vec4 hoverColor = MDTheme::Get()->PrimaryColor;
-	hoverColor.w = 30;
-	mHoverCircle->SetBackgroundColor(hoverColor);
-    mValue->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+//    mCircle->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
+//    glm::vec4 primary = MDTheme::Get()->PrimaryColor;
+//	mBackground->SetBackgroundColor(glm::vec4(primary.r, primary.g, primary.b, 50));
+//    glm::vec4 hoverColor = MDTheme::Get()->PrimaryColor;
+//	hoverColor.w = 30;
+//	mHoverCircle->SetBackgroundColor(hoverColor);
+//    mValue->SetBackgroundColor(MDTheme::Get()->PrimaryColor);
 
 	MDSliderBase::Render();
 }
@@ -133,7 +133,7 @@ void MDSlider::OnMouseMove(e3::MouseEvent *pEvent)
 	{
 		//_ShowInfo();
 		auto ig = mInfo->GetGeometry();
-		mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height, 0));
+		mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height - e3::Dim("6dp"), 0));
 		mInfoText->SetText(std::to_string(mSliderValue));
 	}
 
@@ -271,14 +271,14 @@ void MDSlider::_ShowInfo()
 	if (!mInfoAnimation)
 		mInfoAnimation = new e3::Animation();
 	mInfoAnimation->Start(0.2, [this](float value) {
-		mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height, 0));
+		mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height - e3::Dim("6dp"), 0));
 		mInfo->SetScale(glm::vec3(value, value, 1), e3::ETransformAlignment::Bottom); }, [this]() { mInfoAnimation = nullptr; });
 }
 
 void MDSlider::_HideInfo()
 {
 	auto ig = mInfo->GetGeometry();
-	mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height, 0));
+	mInfo->SetTranslation(glm::vec3(mSliderWidth + mCircle->GetGeometry().width / 2.0f - mInfoShape->GetRect().width / 2.0f, -mInfoShape->GetRect().height - e3::Dim("6dp"), 0));
 	if (!mInfoAnimation)
 		mInfoAnimation = new e3::Animation();
 

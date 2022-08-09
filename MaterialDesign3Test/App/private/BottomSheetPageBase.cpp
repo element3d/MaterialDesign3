@@ -37,9 +37,9 @@ BottomSheetPageBase::BottomSheetPageBase(e3::Element* pParent)
         pElement2->SetHeight("100%");
         pElement2->SetOrientation((e3::EOrientation)1);
         pElement2->SetScaling((e3::EScaling)1);
-        mShowButton = new MDButton();
+        mShowButton = new MDFilledButton();
         pElement2->AddElement(mShowButton);
-        mShowButton->SetLabel(_s(SHOW BOTTOM SHEET));
+        mShowButton->SetLabel(_s(Show Bottom Sheet));
         mBottomSheet = new MDBottomSheet();
         pCustomView1->AddElement(mBottomSheet);
     e3::Element* pElement3 = e3::ViewFactory::CreateShape( e3::EOrientation::Horizontal);

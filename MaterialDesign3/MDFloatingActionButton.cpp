@@ -6,14 +6,27 @@ MDFloatingActionButton::MDFloatingActionButton(e3::Element *pParent)
 	SetBackgroundColor(MDTheme::Get()->PrimaryContainer);
 }
 
-void MDFloatingActionButton::SetIcon(e3::Element *pIcon)
+void MDFloatingActionButton::SetIcon(const std::string& name)
 {
-	//pIcon->SetMarginLeft(0);
-	//pIcon->SetMarginRight(8);
-	pIcon->SetWidth("18dp");
-	pIcon->SetHeight("18dp");
-	((MDIcon *)pIcon)->SetColor(MDTheme::Get()->OnPrimaryContainer);
-	AddElement(pIcon);
+	mIcon->SetName(name);
+}
+
+void MDFloatingActionButton::SetColor(EMDFABColor color)
+{
+	switch (color) {
+		case EMDFABColor::Surface:
+			SetBackgroundColor(MDTheme::Get()->Surface);
+			mIcon->SetColor(MDTheme::Get()->PrimaryColor);
+			return;
+		case EMDFABColor::Secondary:
+			SetBackgroundColor(MDTheme::Get()->SecondaryContainer);
+			mIcon->SetColor(MDTheme::Get()->OnSecondaryContainer);
+			return;
+		case EMDFABColor::Tertiary:
+			SetBackgroundColor(MDTheme::Get()->TertiaryContainer);
+			mIcon->SetColor(MDTheme::Get()->OnTertiaryContainer);
+			return;
+	}
 }
 
 void MDFloatingActionButton::OnMouseEnter(e3::MouseEvent *pEvent)

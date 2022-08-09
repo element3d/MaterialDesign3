@@ -6,19 +6,15 @@ MDTextButton::MDTextButton(e3::Element* pParent)
 	mLabel->SetTextColor(MDTheme::Get()->PrimaryColor);
 }
 
-void MDTextButton::SetIcon(MDIcon* pIcon)
+void MDTextButton::SetIcon(const std::string& name)
 {
-	pIcon->SetMarginLeft("16dp");
-	pIcon->SetMarginRight(0);
-	pIcon->SetWidth("18dp");
-	pIcon->SetHeight("18dp");
-	pIcon->SetColor(MDTheme::Get()->PrimaryColor);
-	mIconCont->AddElement(pIcon);
+	mIcon->SetVisibility(e3::EVisibility::Visible);
+	mIcon->SetName(name);
+	SetPaddingRight("16dp");
 }
 
 void MDTextButton::SetLabel(const std::string& label, bool translate)
 {
-	mLabel->SetVisibility(e3::EVisibility::Visible);
 	mLabel->SetText(label, translate);
 }
 

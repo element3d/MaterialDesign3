@@ -3,7 +3,7 @@
   aspectRatio="1"
   margin="10dp"
   orientation="Vertical"
-  borderRadius='e3::Dim("20dp")'
+  borderRadius='glm::vec4(e3::Dim("20dp"))'
  
   backgroundColor="MDTheme::Get()->Surface">
   <MDIcon

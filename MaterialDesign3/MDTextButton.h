@@ -11,7 +11,7 @@ class E3_EXPORT MDTextButton : public MDTextButtonBase
 public:
 	MDTextButton(e3::Element* pParent = nullptr);
 
-	void SetIcon(MDIcon* pIcon);
+	void SetIcon(const std::string& name);
 	void SetLabel(const std::string& label, bool translate = false);
 
 	virtual void OnMouseEnter(e3::MouseEvent* pEvent) override;

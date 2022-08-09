@@ -3,7 +3,7 @@
   paddingTop="10dp"
   paddingBottom="10dp"
   backgroundColor="MDTheme::Get()->SurfaceVariant"
-  borderRadius='e3::Dim("4dp")'
+  borderRadius='glm::vec4(e3::Dim("4dp"))'
   orientation="Vertical"
   alignItemsVer="Start"
   overflow="Hidden">

@@ -33,10 +33,10 @@
       orientation="Vertical"
       scaling="Shrink">
 
-      <MDButton
+      <MDFilledButton
         element="mDialogButton"
         label="_s(Show dialog)">
-      </MDButton>
+      </MDFilledButton>
      
     </Element>
     <MDDialog

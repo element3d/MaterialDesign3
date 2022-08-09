@@ -6,7 +6,7 @@
 #include <MDAppBar.h>
 #include <MDAppBarAction.h>
 #include <MDAppBarTitle.h>
-#include <MDButton.h>
+#include <MDFilledButton.h>
 #include <MDOutlinedButton.h>
 #include <MDTextButton.h>
 #include <MDFloatingActionButton.h>
@@ -34,7 +34,7 @@ public:
 
  
 protected:
-	MDButton* mDrawerButton = nullptr;
+	MDFilledButton* mDrawerButton = nullptr;
 MDDrawer* mDrawer = nullptr;
 
 

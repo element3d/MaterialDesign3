@@ -101,8 +101,13 @@ void MDTheme::SetDefault()
     sCurrentTheme->Surface = sDefaultTheme->Surface;
     sCurrentTheme->ScaffoldBackgroundColor = sDefaultTheme->ScaffoldBackgroundColor;
     sCurrentTheme->SurfaceVariant = sDefaultTheme->SurfaceVariant;
+    sCurrentTheme->OnSurfaceVariant = sDefaultTheme->OnSurfaceVariant;
     sCurrentTheme->PrimaryContainer = sDefaultTheme->PrimaryContainer;
     sCurrentTheme->OnPrimaryContainer = sDefaultTheme->OnPrimaryContainer;
+    sCurrentTheme->SecondaryContainer = sDefaultTheme->SecondaryContainer;
+    sCurrentTheme->OnSecondaryContainer = sDefaultTheme->OnSecondaryContainer;
+    sCurrentTheme->Outline = sDefaultTheme->Outline;
+
 //	*sCurrentTheme->AppBarTheme.BackgroundColor = *sDefaultTheme->AppBarTheme.BackgroundColor;
 //	*sCurrentTheme->AppBarTheme.TextColor = *sDefaultTheme->AppBarTheme.TextColor;
 //	*sCurrentTheme->AppBarTheme.IconColor = *sDefaultTheme->AppBarTheme.IconColor;
@@ -133,6 +138,11 @@ MDTheme::MDTheme()
     OnSurface = glm::vec4(0, 0, 0, 255);
     SurfaceVariant = glm::vec4(231, 224, 236, 255);
     OnSurfaceVariant = glm::vec4(73, 69, 79, 255);
+
+    Tertiary = glm::vec4(125, 82,96, 255);
+    OnTertiary = glm::vec4(255);
+    TertiaryContainer = glm::vec4(255, 216, 228, 255);
+    OnTertiaryContainer = glm::vec4(49, 17, 29, 255);
 
     Outline = glm::vec4(121, 116, 126, 255);
 }

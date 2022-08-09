@@ -1,6 +1,8 @@
 <MDElement
   width="100%"
   height="1dp"
+  marginTop="8dp"
+  marginBottom="8dp"
   backgroundColor="MDTheme::Get()->Outline">
   <include path="MDTheme.h" />
 </MDElement>

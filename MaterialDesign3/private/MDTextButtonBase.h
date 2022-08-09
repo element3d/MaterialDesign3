@@ -3,7 +3,8 @@
 #define __MDTextButtonBase_H__
 
 #include <e3/ViewFactory.h>
-#include "MDColors.h"
+#include "MDTheme.h"
+#include <MDIcon.h>
 #include <MDText.h>
 #include "MDInkWell.h"
 
@@ -25,7 +26,7 @@ public:
 
  
 protected:
-	e3::Element* mIconCont = nullptr;
+	MDIcon* mIcon = nullptr;
 MDText* mLabel = nullptr;
 e3::Element* mHover = nullptr;
 

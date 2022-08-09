@@ -10,8 +10,10 @@
 #include <MDAppBarTitle.h>
 #include <MDDrawer.h>
 #include <MDElement.h>
-#include <MDListTile.h>
+#include <MDDrawerMenuBody.h>
+#include <MDDrawerMenuItem.h>
 #include <MDDivider.h>
+#include <MDDrawerMenuLabel.h>
 
 
 class DrawerPageBase : public MDElement
@@ -35,8 +37,8 @@ protected:
 MDScaffold* mScaffold = nullptr;
 MDAppBarAction* mDrawerButton = nullptr;
 MDDrawer* mDrawer = nullptr;
-MDListTile* mItem1 = nullptr;
-MDListTile* mItem2 = nullptr;
+MDDrawerMenuItem* mItem1 = nullptr;
+MDDrawerMenuItem* mItem2 = nullptr;
 
 
 };

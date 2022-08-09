@@ -1,21 +1,26 @@
 <MDInkWell
-  height="m: (35, 55, 100), d: 40"
+  height="40dp"
   borderRadius="all: 0.5"
-  overflow="Hidden">
-  <!-- minWidth="m: (100, 150, 300), d: (100, 100, 100)" -->
-  <!-- paddingLeft="m: (20, 20, 30), d: 10"
-  paddingRight="m: (20, 20, 30), d: 10" -->
-  <include path="MDColors.h"/>
+  overflow="Hidden"
+  paddingLeft="12dp"
+  paddingRight="12dp">
 
-  <Element
-    element="mIconCont">
-  </Element>
+  <include path="MDTheme.h"/>
+
+  <MDIcon
+      element="mIcon"
+      margin="0"
+      marginRight="8dp"
+      visibility="Hidden"
+      width="18dp"
+      color="MDTheme::Get()->PrimaryColor"
+      aspectRatio="1">
+  </MDIcon>
   <MDText
-    element="mLabel"
-    fontStyle="Bold"
-    marginRight="12dp"
-    marginLeft="12dp"
-    fontSize="16dp">
+      element="mLabel"
+      fontStyle="Bold"
+      fontSize="18dp"
+      textColor="MDTheme::Get()->PrimaryColor">
   </MDText>
   <Element
     element="mHover"

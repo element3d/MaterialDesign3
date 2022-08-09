@@ -10,7 +10,7 @@ MainMenuItemBase::MainMenuItemBase(e3::Element* pParent)
         this->SetAspectRatio(1.000000);
         this->SetMargin("10dp");
         this->SetOrientation((e3::EOrientation)1);
-        this->SetBorderRadius(e3::Dim("20dp"));
+        this->SetBorderRadius(glm::vec4(e3::Dim("20dp")));
         this->SetBackgroundColor(MDTheme::Get()->Surface);
         mIcon = new MDIcon();
         AddElement(mIcon);

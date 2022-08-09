@@ -24,6 +24,16 @@ void MDDrawer::AddElement(e3::Element* pElement)
 //	});
 }
 
+void MDDrawer::AddElement(MDDrawerMenuItem* pItem)
+{
+	mContent = (MDElement*)pItem;
+	mContent->SetWidth("360dp");
+	mContent->SetBorderRadius(glm::vec4(0, e3::Dim("16dp"), e3::Dim("16dp"), 0));
+	mContent->SetBackgroundColor(MDTheme::Get()->Surface);
+	e3::Element::AddElement(pItem);
+	pItem->SetBackgroundColor(glm::vec4(255, 0, 0, 255));
+}
+
 
 void MDDrawer::Show()
 {

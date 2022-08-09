@@ -7,7 +7,7 @@
 #include <MDScaffold.h>
 #include <MDAppBar.h>
 #include <MDAppBarTitle.h>
-#include <MDButton.h>
+#include <MDFilledButton.h>
 #include <MDBottomSheet.h>
 #include <MDListView.h>
 #include "MDElement.h"
@@ -31,7 +31,7 @@ public:
  
 protected:
 	BackIcon* mBack = nullptr;
-MDButton* mShowButton = nullptr;
+MDFilledButton* mShowButton = nullptr;
 MDBottomSheet* mBottomSheet = nullptr;
 MDListView* mList = nullptr;
 

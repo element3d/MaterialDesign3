@@ -3,6 +3,7 @@
 #define MDDrawer_H_
 
 #include "private/MDDrawerBase.h"
+#include "MDDrawerMenuItem.h"
 
 class MDScaffold;
 class E3_EXPORT MDDrawer : public MDDrawerBase
@@ -18,6 +19,7 @@ public:
 	bool IsShown();
 
 	virtual void AddElement(e3::Element* pElement) override;
+	void AddElement(MDDrawerMenuItem* pItem);
 public:
 	virtual bool OnClick(e3::MouseEvent* pEvent) override;
 

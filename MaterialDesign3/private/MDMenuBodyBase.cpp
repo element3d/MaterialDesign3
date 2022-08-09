@@ -10,7 +10,7 @@ MDMenuBodyBase::MDMenuBodyBase(e3::Element* pParent)
         this->SetPaddingTop("10dp");
         this->SetPaddingBottom("10dp");
         this->SetBackgroundColor(MDTheme::Get()->SurfaceVariant);
-        this->SetBorderRadius(e3::Dim("4dp"));
+        this->SetBorderRadius(glm::vec4(e3::Dim("4dp")));
         this->SetOrientation((e3::EOrientation)1);
         this->SetAlignItemsVer((e3::EAlignment)0);
         this->SetOverflow((e3::EOverflow)0);

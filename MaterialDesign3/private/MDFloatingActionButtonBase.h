@@ -3,6 +3,7 @@
 #define __MDFloatingActionButtonBase_H__
 
 #include <e3/ViewFactory.h>
+#include <MDIcon.h>
 #include "MDInkWell.h"
 
 
@@ -23,7 +24,8 @@ public:
 
  
 protected:
-	e3::Element* mHover = nullptr;
+	MDIcon* mIcon = nullptr;
+e3::Element* mHover = nullptr;
 
 
 };

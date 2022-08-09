@@ -1,0 +1,29 @@
+<MDInkWell
+    height="40dp"
+    borderRadius="all: 0.5"
+    overflow="Hidden"
+    paddingLeft="24dp"
+    paddingRight="24dp"
+    backgroundColor="MDTheme::Get()->Surface">
+    <include path="MDTheme.h" />
+    <Shadow
+        blurSize='e3::Dim("4dp")'
+        color="glm::vec4(0, 0, 0, 255)"
+        offset="x: 0, y: 4">
+    </Shadow>
+    <MDIcon
+        element="mIcon"
+        margin="0"
+        marginRight="8dp"
+        visibility="Hidden"
+        width="18dp"
+        color="MDTheme::Get()->PrimaryColor"
+        aspectRatio="1">
+    </MDIcon>
+    <MDText
+        element="mLabel"
+        fontStyle="Bold"
+        fontSize="18dp"
+        textColor="MDTheme::Get()->PrimaryColor">
+    </MDText>
+</MDInkWell>
